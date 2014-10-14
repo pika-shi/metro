@@ -1,0 +1,232 @@
+[04/Oct/2014 18:42:27] "GET / HTTP/1.1" 200 1757
+[04/Oct/2014 18:43:36] "GET / HTTP/1.1" 200 1757
+[04/Oct/2014 18:43:38] "GET / HTTP/1.1" 200 1757
+[04/Oct/2014 18:44:06] "GET / HTTP/1.1" 200 1757
+[04/Oct/2014 18:44:08] "GET / HTTP/1.1" 200 1757
+Validating models...
+
+0 errors found
+October 04, 2014 - 18:41:54
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Oct/2014 19:01:58] "GET /redis HTTP/1.1" 500 61843
+[04/Oct/2014 19:02:14] "GET /neartrain HTTP/1.1" 500 62442
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:01:46
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Oct/2014 19:02:50] "GET /neartrain HTTP/1.1" 500 84797
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:02:47
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:04:42
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py:127: DeprecationWarning: Creating streaming responses with `HttpResponse` is deprecated. Use `StreamingHttpResponse` instead if you need the streaming behavior.
+  for data in self.result:
+
+[04/Oct/2014 19:04:47] "GET /neartrain HTTP/1.1" 200 96
+[04/Oct/2014 19:04:53] "GET /redis HTTP/1.1" 200 87
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:04:45
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py:127: DeprecationWarning: Creating streaming responses with `HttpResponse` is deprecated. Use `StreamingHttpResponse` instead if you need the streaming behavior.
+  for data in self.result:
+
+[04/Oct/2014 19:08:26] "GET /redis HTTP/1.1" 200 194
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:05:39
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+October 04, 2014 - 19:24:12
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "./manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 399, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 392, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 261, in fetch_command
+    commands = get_commands()
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 107, in get_commands
+    apps = settings.INSTALLED_APPS
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/Users/job2/Desktop/githome/metro_api/metro_api/settings.py", line 78
+    'local':{
+          ^
+SyntaxError: invalid syntax
+/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py:127: DeprecationWarning: Creating streaming responses with `HttpResponse` is deprecated. Use `StreamingHttpResponse` instead if you need the streaming behavior.
+  for data in self.result:
+
+[04/Oct/2014 20:32:16] "GET /redis HTTP/1.1" 200 213
+Validating models...
+
+0 errors found
+October 04, 2014 - 20:32:14
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py:127: DeprecationWarning: Creating streaming responses with `HttpResponse` is deprecated. Use `StreamingHttpResponse` instead if you need the streaming behavior.
+  for data in self.result:
+
+[04/Oct/2014 20:33:28] "GET /redis HTTP/1.1" 200 261
+Validating models...
+
+0 errors found
+October 04, 2014 - 20:33:17
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py:127: DeprecationWarning: Creating streaming responses with `HttpResponse` is deprecated. Use `StreamingHttpResponse` instead if you need the streaming behavior.
+  for data in self.result:
+
+[09/Oct/2014 08:30:36] "GET /redis HTTP/1.1" 200 261
+[09/Oct/2014 08:31:14] "GET /neartrains HTTP/1.1" 404 2145
+[09/Oct/2014 08:31:17] "GET /neartrain HTTP/1.1" 200 121
+Validating models...
+
+0 errors found
+October 04, 2014 - 20:33:44
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+October 09, 2014 - 08:31:39
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+from:odpt.Station:TokyoMetro.Marunouchi.NakanoSakaue,to:odpt.Station:TokyoMetro.Marunouchi.NishiShinjuku
+from:odpt.Station:TokyoMetro.Marunouchi.NishiShinjuku,to:odpt.Station:TokyoMetro.Marunouchi.Shinjuku
+from:odpt.Station:TokyoMetro.Marunouchi.Yotsuya,to:odpt.Station:TokyoMetro.Marunouchi.AkasakaMitsuke
+from:odpt.Station:TokyoMetro.Marunouchi.Kasumigaseki,to:odpt.Station:TokyoMetro.Marunouchi.Ginza
+from:odpt.Station:TokyoMetro.Marunouchi.Ginza,to:odpt.Station:TokyoMetro.Marunouchi.Tokyo
+from:odpt.Station:TokyoMetro.Marunouchi.HongoSanchome,to:odpt.Station:TokyoMetro.Marunouchi.Korakuen
+from:odpt.Station:TokyoMetro.Marunouchi.Korakuen,to:odpt.Station:TokyoMetro.Marunouchi.Myogadani
+from:odpt.Station:TokyoMetro.Marunouchi.ShinOtsuka,to:odpt.Station:TokyoMetro.Marunouchi.Ikebukuro
+from:odpt.Station:TokyoMetro.Namboku.ShirokaneTakanawa,to:odpt.Station:TokyoMetro.Namboku.AzabuJuban
+from:odpt.Station:TokyoMetro.Namboku.Iidabashi,to:odpt.Station:TokyoMetro.Namboku.Korakuen
+from:odpt.Station:TokyoMetro.Namboku.Todaimae,to:odpt.Station:TokyoMetro.Namboku.HonKomagome
+from:odpt.Station:TokyoMetro.Namboku.Komagome,to:odpt.Station:TokyoMetro.Namboku.Nishigahara
+from:odpt.Station:TokyoMetro.Tozai.Nakano,to:odpt.Station:TokyoMetro.Tozai.Ochiai
+from:odpt.Station:TokyoMetro.Tozai.Ochiai,to:odpt.Station:TokyoMetro.Tozai.Takadanobaba
+from:odpt.Station:TokyoMetro.Tozai.Takadanobaba,to:odpt.Station:TokyoMetro.Tozai.Waseda
+from:odpt.Station:TokyoMetro.Tozai.Kagurazaka,to:odpt.Station:TokyoMetro.Tozai.Iidabashi
+from:odpt.Station:TokyoMetro.Tozai.Iidabashi,to:odpt.Station:TokyoMetro.Tozai.Kudanshita
+from:odpt.Station:TokyoMetro.Tozai.Kudanshita,to:odpt.Station:TokyoMetro.Tozai.Takebashi
+from:odpt.Station:TokyoMetro.Tozai.Takebashi,to:odpt.Station:TokyoMetro.Tozai.Otemachi
+from:odpt.Station:TokyoMetro.Tozai.Kayabacho,to:odpt.Station:TokyoMetro.Tozai.MonzenNakacho
+from:odpt.Station:TokyoMetro.Tozai.Toyocho,to:odpt.Station:TokyoMetro.Tozai.MinamiSunamachi
+from:odpt.Station:TokyoMetro.Tozai.MinamiSunamachi,to:odpt.Station:TokyoMetro.Tozai.NishiKasai
+from:odpt.Station:TokyoMetro.Tozai.NishiKasai,to:odpt.Station:TokyoMetro.Tozai.Kasai
+from:odpt.Station:TokyoMetro.Tozai.Kasai,to:odpt.Station:TokyoMetro.Tozai.Urayasu
+from:odpt.Station:TokyoMetro.Tozai.MinamiGyotoku,to:odpt.Station:TokyoMetro.Tozai.Gyotoku
+from:odpt.Station:TokyoMetro.Hibiya.NakaMeguro,to:odpt.Station:TokyoMetro.Hibiya.Ebisu
+from:odpt.Station:TokyoMetro.Hibiya.Ebisu,to:odpt.Station:TokyoMetro.Hibiya.HiroO
+from:odpt.Station:TokyoMetro.Hibiya.HiroO,to:odpt.Station:TokyoMetro.Hibiya.Roppongi
+from:odpt.Station:TokyoMetro.Hibiya.Roppongi,to:odpt.Station:TokyoMetro.Hibiya.Kamiyacho
+from:odpt.Station:TokyoMetro.Hibiya.Kamiyacho,to:odpt.Station:TokyoMetro.Hibiya.Kasumigaseki
+from:odpt.Station:TokyoMetro.Hibiya.Tsukiji,to:odpt.Station:TokyoMetro.Hibiya.Hatchobori
+from:odpt.Station:TokyoMetro.Hibiya.Ningyocho,to:odpt.Station:TokyoMetro.Hibiya.Kodemmacho
+from:odpt.Station:TokyoMetro.Hibiya.MinamiSenju,to:odpt.Station:TokyoMetro.Hibiya.KitaSenju
+from:odpt.Station:TokyoMetro.Fukutoshin.Wakoshi,to:odpt.Station:TokyoMetro.Fukutoshin.ChikatetsuNarimasu
+from:odpt.Station:TokyoMetro.Fukutoshin.KotakeMukaihara,to:odpt.Station:TokyoMetro.Fukutoshin.Senkawa
+from:odpt.Station:TokyoMetro.Fukutoshin.Kanamecho,to:odpt.Station:TokyoMetro.Fukutoshin.Ikebukuro
+from:odpt.Station:TokyoMetro.Fukutoshin.HigashiShinjuku,to:odpt.Station:TokyoMetro.Fukutoshin.ShinjukuSanchome
+from:odpt.Station:TokyoMetro.Hanzomon.Sumiyoshi,to:odpt.Station:TokyoMetro.Hanzomon.KiyosumiShirakawa
+from:odpt.Station:TokyoMetro.Hanzomon.KiyosumiShirakawa,to:odpt.Station:TokyoMetro.Hanzomon.Suitengumae
+from:odpt.Station:TokyoMetro.Hanzomon.Kudanshita,to:odpt.Station:TokyoMetro.Hanzomon.Hanzomon
+from:odpt.Station:TokyoMetro.Ginza.Inaricho,to:odpt.Station:TokyoMetro.Ginza.Ueno
+from:odpt.Station:TokyoMetro.Ginza.UenoHirokoji,to:odpt.Station:/usr/local/lib/python2.7/site-packages/django/http/response.py:327: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
+  super(HttpResponse, self).__init__(*args, **kwargs)
+
+[09/Oct/2014 08:32:07] "GET /metron HTTP/1.1" 200 7789
+TokyoMetro.Ginza.Suehirocho
+from:odpt.Station:TokyoMetro.Ginza.Suehirocho,to:odpt.Station:TokyoMetro.Ginza.Kanda
+from:odpt.Station:TokyoMetro.Ginza.Nihombashi,to:odpt.Station:TokyoMetro.Ginza.Kyobashi
+from:odpt.Station:TokyoMetro.Ginza.OmoteSando,to:odpt.Station:TokyoMetro.Ginza.Shibuya
+from:odpt.Station:TokyoMetro.Ginza.AoyamaItchome,to:odpt.Station:TokyoMetro.Ginza.AkasakaMitsuke
+from:odpt.Station:TokyoMetro.Ginza.Mitsukoshimae,to:odpt.Station:TokyoMetro.Ginza.Kanda
+from:odpt.Station:TokyoMetro.Ginza.Kanda,to:odpt.Station:TokyoMetro.Ginza.Suehirocho
+from:odpt.Station:TokyoMetro.Ginza.UenoHirokoji,to:odpt.Station:TokyoMetro.Ginza.Ueno
+from:odpt.Station:TokyoMetro.Yurakucho.Ikebukuro,to:odpt.Station:TokyoMetro.Yurakucho.HigashiIkebukuro
+from:odpt.Station:TokyoMetro.Yurakucho.HigashiIkebukuro,to:odpt.Station:TokyoMetro.Yurakucho.Gokokuji
+from:odpt.Station:TokyoMetro.Yurakucho.Gokokuji,to:odpt.Station:TokyoMetro.Yurakucho.Edogawabashi
+from:odpt.Station:TokyoMetro.Yurakucho.Ichigaya,to:odpt.Station:TokyoMetro.Yurakucho.Kojimachi
+from:odpt.Station:TokyoMetro.Yurakucho.Shintomicho,to:odpt.Station:TokyoMetro.Yurakucho.GinzaItchome
+from:odpt.Station:TokyoMetro.Yurakucho.Yurakucho,to:odpt.Station:TokyoMetro.Yurakucho.Sakuradamon
+from:odpt.Station:TokyoMetro.Yurakucho.Ichigaya,to:odpt.Station:TokyoMetro.Yurakucho.Iidabashi
+from:odpt.Station:TokyoMetro.Yurakucho.Kanamecho,to:odpt.Station:TokyoMetro.Yurakucho.Senkawa
+from:odpt.Station:TokyoMetro.Yurakucho.KotakeMukaihara,to:odpt.Station:TokyoMetro.Yurakucho.Hikawadai
+from:odpt.Station:TokyoMetro.Yurakucho.ChikatetsuAkatsuka,to:odpt.Station:TokyoMetro.Yurakucho.ChikatetsuNarimasu
+from:odpt.Station:TokyoMetro.Yurakucho.ChikatetsuNarimasu,to:odpt.Station:TokyoMetro.Yurakucho.Wakoshi
+from:odpt.Station:TokyoMetro.Chiyoda.Ayase,to:odpt.Station:TokyoMetro.Chiyoda.KitaSenju
+from:odpt.Station:TokyoMetro.Chiyoda.Kasumigaseki,to:odpt.Station:TokyoMetro.Chiyoda.Hibiya
+from:odpt.Station:TokyoMetro.Chiyoda.ShinOchanomizu,to:odpt.Station:TokyoMetro.Chiyoda.Yushima
+from:odpt.Station:TokyoMetro.Chiyoda.Yushima,to:odpt.Station:TokyoMetro.Chiyoda.Nezu
+from:odpt.Station:TokyoMetro.Chiyoda.NishiNippori,to:odpt.Station:TokyoMetro.Chiyoda.Machiya
+from:odpt.Station:TokyoMetro.Chiyoda.Machiya,to:odpt.Station:TokyoMetro.Chiyoda.KitaSenju
+[12/Oct/2014 15:48:08] "GET /neartrain HTTP/1.1" 500 94612
+Validating models...
+
+0 errors found
+October 09, 2014 - 08:34:03
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[12/Oct/2014 15:49:07] "GET /neartrain HTTP/1.1" 500 94853
+Validating models...
+
+0 errors found
+October 12, 2014 - 15:48:50
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[12/Oct/2014 15:50:21] "GET /neartrain HTTP/1.1" 500 95023
+Validating models...
+
+0 errors found
+October 12, 2014 - 15:49:40
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+October 12, 2014 - 15:51:00
+Django version 1.6.5, using settings 'metro_api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
