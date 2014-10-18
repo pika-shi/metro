@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
+		C2771F0519F2307E00CEBF58 /* betstmap.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771EFF19F2307E00CEBF58 /* betstmap.json */; };
+		C2771F0619F2307E00CEBF58 /* metroRailway.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0019F2307E00CEBF58 /* metroRailway.json */; };
+		C2771F0719F2307E00CEBF58 /* metroRosen.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0119F2307E00CEBF58 /* metroRosen.json */; };
+		C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0219F2307E00CEBF58 /* metrostation.json */; };
+		C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0319F2307E00CEBF58 /* stationgeo.json */; };
+		C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0419F2307E00CEBF58 /* stationgeohash.json */; };
+		C2771F0C19F2310100CEBF58 /* TrainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2771F0B19F2310100CEBF58 /* TrainManager.swift */; };
 		C2F03F4C19E2D4870056A63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4B19E2D4870056A63E /* AppDelegate.swift */; };
 		C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4D19E2D4870056A63E /* ViewController.swift */; };
 		C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F03F4F19E2D4870056A63E /* Main.storyboard */; };
@@ -34,6 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42A223C1891E87B0AB218974 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Metro-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2771EFF19F2307E00CEBF58 /* betstmap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = betstmap.json; path = ../../../metro_api/static/metrodata/betstmap.json; sourceTree = "<group>"; };
+		C2771F0019F2307E00CEBF58 /* metroRailway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metroRailway.json; path = ../../../metro_api/static/metrodata/metroRailway.json; sourceTree = "<group>"; };
+		C2771F0119F2307E00CEBF58 /* metroRosen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metroRosen.json; path = ../../../metro_api/static/metrodata/metroRosen.json; sourceTree = "<group>"; };
+		C2771F0219F2307E00CEBF58 /* metrostation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metrostation.json; path = ../../../metro_api/static/metrodata/metrostation.json; sourceTree = "<group>"; };
+		C2771F0319F2307E00CEBF58 /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeo.json; path = ../../../metro_api/static/metrodata/stationgeo.json; sourceTree = "<group>"; };
+		C2771F0419F2307E00CEBF58 /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeohash.json; path = ../../../metro_api/static/metrodata/stationgeohash.json; sourceTree = "<group>"; };
+		C2771F0B19F2310100CEBF58 /* TrainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainManager.swift; sourceTree = "<group>"; };
 		C2F03F4619E2D4870056A63E /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F03F4B19E2D4870056A63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,16 +66,16 @@
 		C2F03F6B19EB64BE0056A63E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C2F03F6F19EBCA950056A63E /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = json.swift; path = ../json.swift; sourceTree = "<group>"; };
 		C2F03F7119EBFD970056A63E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C2F03F8219ED53BA0056A63E /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cgeohash.h; path = "../../objc-geohash/Classes/ARC/cgeohash.h"; sourceTree = "<group>"; };
-		C2F03F8319ED53BA0056A63E /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cgeohash.m; path = "../../objc-geohash/Classes/ARC/cgeohash.m"; sourceTree = "<group>"; };
-		C2F03F8419ED53BA0056A63E /* GeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoHash.h; path = "../../objc-geohash/Classes/ARC/GeoHash.h"; sourceTree = "<group>"; };
-		C2F03F8519ED53BA0056A63E /* GeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoHash.m; path = "../../objc-geohash/Classes/ARC/GeoHash.m"; sourceTree = "<group>"; };
-		C2F03F8619ED53BA0056A63E /* GHArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHArea.h; path = "../../objc-geohash/Classes/ARC/GHArea.h"; sourceTree = "<group>"; };
-		C2F03F8719ED53BA0056A63E /* GHArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHArea.m; path = "../../objc-geohash/Classes/ARC/GHArea.m"; sourceTree = "<group>"; };
-		C2F03F8819ED53BA0056A63E /* GHNeighbors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHNeighbors.h; path = "../../objc-geohash/Classes/ARC/GHNeighbors.h"; sourceTree = "<group>"; };
-		C2F03F8919ED53BA0056A63E /* GHNeighbors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHNeighbors.m; path = "../../objc-geohash/Classes/ARC/GHNeighbors.m"; sourceTree = "<group>"; };
-		C2F03F8A19ED53BA0056A63E /* GHRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHRange.h; path = "../../objc-geohash/Classes/ARC/GHRange.h"; sourceTree = "<group>"; };
-		C2F03F8B19ED53BA0056A63E /* GHRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHRange.m; path = "../../objc-geohash/Classes/ARC/GHRange.m"; sourceTree = "<group>"; };
+		C2F03F8219ED53BA0056A63E /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cgeohash.h; path = "../../../objc-geohash/Classes/ARC/cgeohash.h"; sourceTree = "<group>"; };
+		C2F03F8319ED53BA0056A63E /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cgeohash.m; path = "../../../objc-geohash/Classes/ARC/cgeohash.m"; sourceTree = "<group>"; };
+		C2F03F8419ED53BA0056A63E /* GeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoHash.h; path = "../../../objc-geohash/Classes/ARC/GeoHash.h"; sourceTree = "<group>"; };
+		C2F03F8519ED53BA0056A63E /* GeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoHash.m; path = "../../../objc-geohash/Classes/ARC/GeoHash.m"; sourceTree = "<group>"; };
+		C2F03F8619ED53BA0056A63E /* GHArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHArea.h; path = "../../../objc-geohash/Classes/ARC/GHArea.h"; sourceTree = "<group>"; };
+		C2F03F8719ED53BA0056A63E /* GHArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHArea.m; path = "../../../objc-geohash/Classes/ARC/GHArea.m"; sourceTree = "<group>"; };
+		C2F03F8819ED53BA0056A63E /* GHNeighbors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHNeighbors.h; path = "../../../objc-geohash/Classes/ARC/GHNeighbors.h"; sourceTree = "<group>"; };
+		C2F03F8919ED53BA0056A63E /* GHNeighbors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHNeighbors.m; path = "../../../objc-geohash/Classes/ARC/GHNeighbors.m"; sourceTree = "<group>"; };
+		C2F03F8A19ED53BA0056A63E /* GHRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHRange.h; path = "../../../objc-geohash/Classes/ARC/GHRange.h"; sourceTree = "<group>"; };
+		C2F03F8B19ED53BA0056A63E /* GHRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHRange.m; path = "../../../objc-geohash/Classes/ARC/GHRange.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +85,7 @@
 			files = (
 				C2F03F7219EBFD970056A63E /* CoreLocation.framework in Frameworks */,
 				C2F03F6C19EB64BE0056A63E /* MapKit.framework in Frameworks */,
+				5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,24 +99,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		733A7A16DAAEA8140D7AF07B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */,
+				42A223C1891E87B0AB218974 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		74851EF3BE99480B6CA054D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D82EED5F6F27CE1894ADD2B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2F03F3D19E2D4870056A63E = {
 			isa = PBXGroup;
 			children = (
-				C2F03F8219ED53BA0056A63E /* cgeohash.h */,
-				C2F03F8319ED53BA0056A63E /* cgeohash.m */,
-				C2F03F8419ED53BA0056A63E /* GeoHash.h */,
-				C2F03F8519ED53BA0056A63E /* GeoHash.m */,
-				C2F03F8619ED53BA0056A63E /* GHArea.h */,
-				C2F03F8719ED53BA0056A63E /* GHArea.m */,
-				C2F03F8819ED53BA0056A63E /* GHNeighbors.h */,
-				C2F03F8919ED53BA0056A63E /* GHNeighbors.m */,
-				C2F03F8A19ED53BA0056A63E /* GHRange.h */,
-				C2F03F8B19ED53BA0056A63E /* GHRange.m */,
 				C2F03F7119EBFD970056A63E /* CoreLocation.framework */,
 				C2F03F6B19EB64BE0056A63E /* MapKit.framework */,
 				C2F03F4819E2D4870056A63E /* Metro */,
 				C2F03F5E19E2D4870056A63E /* MetroTests */,
 				C2F03F4719E2D4870056A63E /* Products */,
+				733A7A16DAAEA8140D7AF07B /* Pods */,
+				74851EF3BE99480B6CA054D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +141,16 @@
 		C2F03F4819E2D4870056A63E /* Metro */ = {
 			isa = PBXGroup;
 			children = (
+				C2F03F8219ED53BA0056A63E /* cgeohash.h */,
+				C2F03F8319ED53BA0056A63E /* cgeohash.m */,
+				C2F03F8419ED53BA0056A63E /* GeoHash.h */,
+				C2F03F8519ED53BA0056A63E /* GeoHash.m */,
+				C2F03F8619ED53BA0056A63E /* GHArea.h */,
+				C2F03F8719ED53BA0056A63E /* GHArea.m */,
+				C2F03F8819ED53BA0056A63E /* GHNeighbors.h */,
+				C2F03F8919ED53BA0056A63E /* GHNeighbors.m */,
+				C2F03F8A19ED53BA0056A63E /* GHRange.h */,
+				C2F03F8B19ED53BA0056A63E /* GHRange.m */,
 				C2F03F6F19EBCA950056A63E /* json.swift */,
 				C2F03F4B19E2D4870056A63E /* AppDelegate.swift */,
 				C2F03F4D19E2D4870056A63E /* ViewController.swift */,
@@ -119,6 +158,8 @@
 				C2F03F5219E2D4870056A63E /* Images.xcassets */,
 				C2F03F5419E2D4870056A63E /* LaunchScreen.xib */,
 				C2F03F4919E2D4870056A63E /* Supporting Files */,
+				C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */,
+				C2771F0B19F2310100CEBF58 /* TrainManager.swift */,
 			);
 			path = Metro;
 			sourceTree = "<group>";
@@ -126,6 +167,12 @@
 		C2F03F4919E2D4870056A63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C2771EFF19F2307E00CEBF58 /* betstmap.json */,
+				C2771F0019F2307E00CEBF58 /* metroRailway.json */,
+				C2771F0119F2307E00CEBF58 /* metroRosen.json */,
+				C2771F0219F2307E00CEBF58 /* metrostation.json */,
+				C2771F0319F2307E00CEBF58 /* stationgeo.json */,
+				C2771F0419F2307E00CEBF58 /* stationgeohash.json */,
 				C2F03F4A19E2D4870056A63E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -155,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2F03F6519E2D4870056A63E /* Build configuration list for PBXNativeTarget "Metro" */;
 			buildPhases = (
+				1B6CDAF62002869009C8294B /* Check Pods Manifest.lock */,
 				C2F03F4219E2D4870056A63E /* Sources */,
 				C2F03F4319E2D4870056A63E /* Frameworks */,
 				C2F03F4419E2D4870056A63E /* Resources */,
+				FBC2172DD4BEA79CD37F7FAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +246,11 @@
 				TargetAttributes = {
 					C2F03F4519E2D4870056A63E = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C2F03F5A19E2D4870056A63E = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -229,7 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */,
+				C2771F0519F2307E00CEBF58 /* betstmap.json in Resources */,
 				C2F03F5619E2D4870056A63E /* LaunchScreen.xib in Resources */,
+				C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */,
+				C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */,
+				C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */,
+				C2771F0719F2307E00CEBF58 /* metroRosen.json in Resources */,
+				C2771F0619F2307E00CEBF58 /* metroRailway.json in Resources */,
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,12 +303,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B6CDAF62002869009C8294B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC2172DD4BEA79CD37F7FAA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2F03F4219E2D4870056A63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C2F03F9019ED53BA0056A63E /* GHRange.m in Sources */,
+				C2771F0C19F2310100CEBF58 /* TrainManager.swift in Sources */,
 				C2F03F8D19ED53BA0056A63E /* GeoHash.m in Sources */,
 				C2F03F7019EBCA950056A63E /* json.swift in Sources */,
 				C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */,
@@ -299,6 +393,7 @@
 /* Begin XCBuildConfiguration section */
 		C2F03F6319E2D4870056A63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -341,6 +436,7 @@
 		};
 		C2F03F6419E2D4870056A63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A223C1891E87B0AB218974 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -376,26 +472,37 @@
 		};
 		C2F03F6619E2D4870056A63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		C2F03F6719E2D4870056A63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A223C1891E87B0AB218974 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		C2F03F6919E2D4870056A63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -415,6 +522,7 @@
 		};
 		C2F03F6A19E2D4870056A63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A223C1891E87B0AB218974 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
