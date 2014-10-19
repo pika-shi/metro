@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
+		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
+		C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39B19F34936009EC1F1 /* StationManager.swift */; };
 		C2771F0519F2307E00CEBF58 /* betstmap.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771EFF19F2307E00CEBF58 /* betstmap.json */; };
 		C2771F0619F2307E00CEBF58 /* metroRailway.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0019F2307E00CEBF58 /* metroRailway.json */; };
 		C2771F0719F2307E00CEBF58 /* metroRosen.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0119F2307E00CEBF58 /* metroRosen.json */; };
 		C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0219F2307E00CEBF58 /* metrostation.json */; };
 		C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0319F2307E00CEBF58 /* stationgeo.json */; };
 		C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0419F2307E00CEBF58 /* stationgeohash.json */; };
-		C2771F0C19F2310100CEBF58 /* TrainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2771F0B19F2310100CEBF58 /* TrainManager.swift */; };
 		C2F03F4C19E2D4870056A63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4B19E2D4870056A63E /* AppDelegate.swift */; };
 		C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4D19E2D4870056A63E /* ViewController.swift */; };
 		C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F03F4F19E2D4870056A63E /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		42A223C1891E87B0AB218974 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
+		C220E39B19F34936009EC1F1 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Metro-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2771EFF19F2307E00CEBF58 /* betstmap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = betstmap.json; path = ../../../metro_api/static/metrodata/betstmap.json; sourceTree = "<group>"; };
 		C2771F0019F2307E00CEBF58 /* metroRailway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metroRailway.json; path = ../../../metro_api/static/metrodata/metroRailway.json; sourceTree = "<group>"; };
@@ -52,7 +55,6 @@
 		C2771F0219F2307E00CEBF58 /* metrostation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metrostation.json; path = ../../../metro_api/static/metrodata/metrostation.json; sourceTree = "<group>"; };
 		C2771F0319F2307E00CEBF58 /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeo.json; path = ../../../metro_api/static/metrodata/stationgeo.json; sourceTree = "<group>"; };
 		C2771F0419F2307E00CEBF58 /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeohash.json; path = ../../../metro_api/static/metrodata/stationgeohash.json; sourceTree = "<group>"; };
-		C2771F0B19F2310100CEBF58 /* TrainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainManager.swift; sourceTree = "<group>"; };
 		C2F03F4619E2D4870056A63E /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F03F4B19E2D4870056A63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				C2F03F5419E2D4870056A63E /* LaunchScreen.xib */,
 				C2F03F4919E2D4870056A63E /* Supporting Files */,
 				C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */,
-				C2771F0B19F2310100CEBF58 /* TrainManager.swift */,
+				C220E39B19F34936009EC1F1 /* StationManager.swift */,
 			);
 			path = Metro;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F03F6119E2D4870056A63E /* MetroTests.swift */,
+				C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */,
 				C2F03F5F19E2D4870056A63E /* Supporting Files */,
 			);
 			path = MetroTests;
@@ -341,8 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */,
 				C2F03F9019ED53BA0056A63E /* GHRange.m in Sources */,
-				C2771F0C19F2310100CEBF58 /* TrainManager.swift in Sources */,
 				C2F03F8D19ED53BA0056A63E /* GeoHash.m in Sources */,
 				C2F03F7019EBCA950056A63E /* json.swift in Sources */,
 				C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */,
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */,
 				C2F03F6219E2D4870056A63E /* MetroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
