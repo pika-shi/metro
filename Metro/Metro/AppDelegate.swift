@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var services_: AnyObject?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let gApiKey:String? = "AIzaSyDkaoHn9zOcl3leGlsjrGziZ5Gr6hyHwzg"
+        if gApiKey == nil {
+            let bundleId = NSBundle.mainBundle().bundleIdentifier
+            var format = "Configure APIKey inside GoogleMapAPIKey.h for your "
+            "bundle `\(bundleId)`, see README.GoogleMapsSDKDemos for more information"
+            NSException(name:"AppDelegate",reason:format,userInfo:nil).raise()
+        }
+        GMSServices.provideAPIKey(gApiKey)
+        services_ = GMSServices.sharedServices()
         return true
     }
 

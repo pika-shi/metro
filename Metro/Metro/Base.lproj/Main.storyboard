@@ -22,9 +22,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-PE-b1g">
-                                <rect key="frame" x="0.0" y="58" width="375" height="562"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-36-wzj">
                                 <rect key="frame" x="131" y="628" width="112" height="31"/>
                                 <state key="normal" title="情報表示"/>
@@ -39,13 +36,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="info_label" destination="0Lg-OI-7iX" id="IhJ-VB-KU4"/>
-                        <outlet property="map_view" destination="sY3-PE-b1g" id="lVL-Z0-squ"/>
                         <outlet property="setting_button" destination="JDQ-36-wzj" id="P3y-K6-dPh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.5" y="137.5"/>
+            <point key="canvasLocation" x="251.5" y="150.5"/>
         </scene>
     </scenes>
 </document>
