@@ -5,7 +5,7 @@
 //  Created by yokota on 2014/10/06.
 //  Copyright (c) 2014年 job2. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import MapKit
 
@@ -17,10 +17,20 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var calloutView :SMCalloutView?
     let defaultRadius = 300
     
+    
     var l_manager:CLLocationManager!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if !userDef.boolForKey("tutorial3") {
+            var moveTutorial : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial")
+            self.presentViewController(moveTutorial as UIViewController, animated: true, completion: nil)
+        }else{
+        
+        
+        
         
         //現在地の情報を取得
         l_manager = CLLocationManager()
@@ -45,7 +55,30 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         marker.title = "現在地"
         marker.snippet = "ここだよ〜"
         marker.map = mapView
+        }
     }
+
+    func tutorial(){
+        let rect = CGRectMake(0,0,self.view.frame.width,self.view.frame.width)
+        let view1 = UIView(frame: rect)
+        view1.tag = 101
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action:"tutorial1")
+        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Left
+        view1.addGestureRecognizer(swipeRecognizer)
+        
+        self.view.addSubview(view1)
+    }
+   
+    func tutorial1(){
+        var userDef = NSUserDefaults.standardUserDefaults()
+        let view1 = self.view.viewWithTag(101)
+        let label1 = UILabel()
+        label1.text = "Hello!"
+        info_label.text = "Hello!"
+        view1?.addSubview(label1)
+        userDef.setBool(true, forKey: "tutorial")
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

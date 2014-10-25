@@ -28,7 +28,7 @@ class MetroTests: XCTestCase {
         // This is an example of a functional test case.
         var st:StationManager=StationManager(CLLocationCoordinate2DMake(35.690667,139.7685037))
         
-        //XCTAssert(st.getNearTrains(), "pass2")
+        XCTAssert(st.getNearTrains(), "pass2")
         XCTAssert(true, "Pass")
     }
     

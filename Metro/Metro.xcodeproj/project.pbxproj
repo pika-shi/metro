@@ -16,6 +16,7 @@
 		C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0219F2307E00CEBF58 /* metrostation.json */; };
 		C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0319F2307E00CEBF58 /* stationgeo.json */; };
 		C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0419F2307E00CEBF58 /* stationgeohash.json */; };
+		C2B3F86D19F9557000C20598 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B3F86C19F9557000C20598 /* TutorialViewController.swift */; };
 		C2F03F4C19E2D4870056A63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4B19E2D4870056A63E /* AppDelegate.swift */; };
 		C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4D19E2D4870056A63E /* ViewController.swift */; };
 		C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F03F4F19E2D4870056A63E /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		C2771F0219F2307E00CEBF58 /* metrostation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metrostation.json; path = ../../../metro_api/static/metrodata/metrostation.json; sourceTree = "<group>"; };
 		C2771F0319F2307E00CEBF58 /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeo.json; path = ../../../metro_api/static/metrodata/stationgeo.json; sourceTree = "<group>"; };
 		C2771F0419F2307E00CEBF58 /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeohash.json; path = ../../../metro_api/static/metrodata/stationgeohash.json; sourceTree = "<group>"; };
+		C2B3F86C19F9557000C20598 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		C2F03F4619E2D4870056A63E /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F03F4B19E2D4870056A63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C2F03F4919E2D4870056A63E /* Supporting Files */,
 				C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */,
 				C220E39B19F34936009EC1F1 /* StationManager.swift */,
+				C2B3F86C19F9557000C20598 /* TutorialViewController.swift */,
 			);
 			path = Metro;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */,
 				C2F03F9019ED53BA0056A63E /* GHRange.m in Sources */,
+				C2B3F86D19F9557000C20598 /* TutorialViewController.swift in Sources */,
 				C2F03F8D19ED53BA0056A63E /* GeoHash.m in Sources */,
 				C2F03F7019EBCA950056A63E /* json.swift in Sources */,
 				C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */,

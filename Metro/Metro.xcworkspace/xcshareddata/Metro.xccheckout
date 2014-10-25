@@ -24,7 +24,7 @@
 		<key>08586C34A92D064EC70F30016958C95957242B93</key>
 		<string>../..</string>
 		<key>1E4AD0E2801D2E4AE2081F311D620B8A3FA050BF</key>
-		<string>../../../metro_api</string>
+		<string>../.._api</string>
 		<key>44A18DA7AD161B8820B0A4D1D0D2397771815039</key>
 		<string>../../../objc-geohash</string>
 	</dict>
