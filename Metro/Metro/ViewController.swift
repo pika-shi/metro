@@ -19,15 +19,22 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     
     var l_manager:CLLocationManager!
+    
+    override func viewDidAppear(animated: Bool) {
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if !userDef.boolForKey("tutorial") {
+            NSLog("OK")
+            var moveTutorial : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial")
+            self.presentViewController(moveTutorial as TutorialViewController, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         var userDef = NSUserDefaults.standardUserDefaults()
-        if !userDef.boolForKey("tutorial3") {
-            var moveTutorial : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial")
-            self.presentViewController(moveTutorial as UIViewController, animated: true, completion: nil)
-        }else{
+        if userDef.boolForKey("tutorial") {
+           NSLog("NG")
         
         
         
@@ -58,17 +65,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         }
     }
 
-    func tutorial(){
-        let rect = CGRectMake(0,0,self.view.frame.width,self.view.frame.width)
-        let view1 = UIView(frame: rect)
-        view1.tag = 101
-        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action:"tutorial1")
-        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Left
-        view1.addGestureRecognizer(swipeRecognizer)
-        
-        self.view.addSubview(view1)
-    }
-   
     func tutorial1(){
         var userDef = NSUserDefaults.standardUserDefaults()
         let view1 = self.view.viewWithTag(101)

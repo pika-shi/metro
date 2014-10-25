@@ -47,8 +47,8 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         buttonSet(1, title: "前へ", x: 10, y: 600,type:BButtonType.Warning)
         buttonSet(1, title: "次へ", x: 190, y: 600,type:BButtonType.Primary)
         buttonSet(2, title: "前へ", x: 10, y: 600,type:BButtonType.Info)
-        buttonSet(2, title: "初期登録へ", x: 190, y: 600,type:BButtonType.Default)
-        
+        var finishBtn = buttonSet(2, title: "初期登録へ", x: 190, y: 600,type:BButtonType.Default)
+        finishBtn.addTarget(self, action: "endTutorial", forControlEvents: .TouchUpInside)
 
         
         
@@ -61,13 +61,14 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
             alpha: CGFloat(1.0)
         )
     }
-    func buttonSet(page:CGFloat,title:String,x:CGFloat,y:CGFloat,type:BButtonType){
+    func buttonSet(page:CGFloat,title:String,x:CGFloat,y:CGFloat,type:BButtonType)->UIButton{
         var btn = BButton(frame: CGRectMake(scrollView.frame.width*page+x, y, 172, 44))
         btn.setTitle(title, forState: .Normal)
         btn.setStyle(BButtonStyle.BootstrapV2)
         btn.setType(type)
         
         scrollView.addSubview(btn)
+        return btn
     }
     
     func carouselViewSet(page:CGFloat,mes:String ){
@@ -98,6 +99,8 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     }
     
     func endTutorial(){
+        var userDef = NSUserDefaults.standardUserDefaults()
+        userDef.setBool(true,forKey:"tutorial")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
