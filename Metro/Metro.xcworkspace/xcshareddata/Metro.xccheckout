@@ -5,28 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>81304347-D397-48EC-B24E-FD0B08EDBF45</string>
+	<string>9F6C0CD8-39D9-4FB5-A333-D0F866045055</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Metro</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>08586C34A92D064EC70F30016958C95957242B93</key>
 		<string>https://github.com/pika-shi/metro.git</string>
+		<key>1E4AD0E2801D2E4AE2081F311D620B8A3FA050BF</key>
+		<string>github.com:yokotanaohiko/metro_api.git</string>
 		<key>44A18DA7AD161B8820B0A4D1D0D2397771815039</key>
 		<string>https://github.com/lyokato/objc-geohash.git</string>
-		<key>6A4B31B57E14E5921DD94BCBC053E4A99028AD01</key>
-		<string>https://github.com/dankogai/swift-json.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>metro_ios/Metro.xcodeproj</string>
+	<string>Metro/Metro.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>08586C34A92D064EC70F30016958C95957242B93</key>
-		<string>../../..</string>
+		<string>../..</string>
+		<key>1E4AD0E2801D2E4AE2081F311D620B8A3FA050BF</key>
+		<string>../../../metro_api</string>
 		<key>44A18DA7AD161B8820B0A4D1D0D2397771815039</key>
-		<string>../../../../objc-geohash</string>
-		<key>6A4B31B57E14E5921DD94BCBC053E4A99028AD01</key>
-		<string>../../../../swift-json</string>
+		<string>../../../objc-geohash</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/pika-shi/metro.git</string>
@@ -48,17 +48,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>44A18DA7AD161B8820B0A4D1D0D2397771815039</string>
+			<string>1E4AD0E2801D2E4AE2081F311D620B8A3FA050BF</string>
 			<key>IDESourceControlWCCName</key>
-			<string>objc-geohash</string>
+			<string>metro_api</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6A4B31B57E14E5921DD94BCBC053E4A99028AD01</string>
+			<string>44A18DA7AD161B8820B0A4D1D0D2397771815039</string>
 			<key>IDESourceControlWCCName</key>
-			<string>swift-json</string>
+			<string>objc-geohash</string>
 		</dict>
 	</array>
 </dict>
