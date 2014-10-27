@@ -2,20 +2,22 @@
 //  TrainManagerTests.swift
 //  Metro
 //
-//  Created by yokota on 2014/10/18.
+//  Created by yokota on 2014/10/19.
 //  Copyright (c) 2014年 job2. All rights reserved.
 //
 
 import Foundation
 import XCTest
 import MapKit
+import Metro
 
-class TrainManagerTests: XCTestCase {
-    let tm
+class StationManagerTests: XCTestCase {
+    var st:StationManager!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        tm = TrainManager(location:CLLocationCoordinate2DMake(35.6653784,139.7304807))
+        st=StationManager(CLLocationCoordinate2DMake(35.690667,139.7685037))
+        
         
     }
     
@@ -26,8 +28,8 @@ class TrainManagerTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(tm.getNearTrains(), "Pass")
+        NSLog("testExample")
+            
     }
-    
     
 }

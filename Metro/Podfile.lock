@@ -20,18 +20,21 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - BButton (4.0.1)
   - Google-Maps-iOS-SDK (1.8.1)
   - SMCalloutView (2.0.3)
   - SVProgressHUD (1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - BButton
   - Google-Maps-iOS-SDK (~> 1.8.1)
   - SMCalloutView (~> 2.0)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  BButton: 396a5e59648e3f687b7d8201b88ebdbad6e36b59
   Google-Maps-iOS-SDK: 4fe35d952dbd1e4dacfcfa178e9cce2f06d67ecc
   SMCalloutView: f413edafcbead0d0a59066efa0708cdbca6dbfff
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
