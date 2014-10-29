@@ -10,12 +10,19 @@
 		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
 		C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39B19F34936009EC1F1 /* StationManager.swift */; };
+		C23D7DCF19FE7A860025B89A /* ConfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D7DCE19FE7A860025B89A /* ConfViewController.swift */; };
 		C2771F0519F2307E00CEBF58 /* betstmap.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771EFF19F2307E00CEBF58 /* betstmap.json */; };
 		C2771F0619F2307E00CEBF58 /* metroRailway.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0019F2307E00CEBF58 /* metroRailway.json */; };
 		C2771F0719F2307E00CEBF58 /* metroRosen.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0119F2307E00CEBF58 /* metroRosen.json */; };
 		C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0219F2307E00CEBF58 /* metrostation.json */; };
 		C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0319F2307E00CEBF58 /* stationgeo.json */; };
 		C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = C2771F0419F2307E00CEBF58 /* stationgeohash.json */; };
+		C2B31A4619FE8F5000B29A01 /* GeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A3F19FE8F5000B29A01 /* GeoHash.m */; };
+		C2B31A4719FE8F5000B29A01 /* GHArea.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4119FE8F5000B29A01 /* GHArea.m */; };
+		C2B31A4819FE8F5000B29A01 /* GHNeighbors.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4319FE8F5000B29A01 /* GHNeighbors.m */; };
+		C2B31A4919FE8F5000B29A01 /* GHRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4519FE8F5000B29A01 /* GHRange.m */; };
+		C2B31A4F19FE8FB700B29A01 /* cgeohash.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4E19FE8FB700B29A01 /* cgeohash.m */; };
+		C2B31A5119FE989400B29A01 /* mapsample.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B31A5019FE989400B29A01 /* mapsample.png */; };
 		C2B3F86D19F9557000C20598 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B3F86C19F9557000C20598 /* TutorialViewController.swift */; };
 		C2F03F4C19E2D4870056A63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4B19E2D4870056A63E /* AppDelegate.swift */; };
 		C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F4D19E2D4870056A63E /* ViewController.swift */; };
@@ -26,11 +33,6 @@
 		C2F03F6C19EB64BE0056A63E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F03F6B19EB64BE0056A63E /* MapKit.framework */; };
 		C2F03F7019EBCA950056A63E /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F6F19EBCA950056A63E /* json.swift */; };
 		C2F03F7219EBFD970056A63E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F03F7119EBFD970056A63E /* CoreLocation.framework */; };
-		C2F03F8C19ED53BA0056A63E /* cgeohash.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F8319ED53BA0056A63E /* cgeohash.m */; };
-		C2F03F8D19ED53BA0056A63E /* GeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F8519ED53BA0056A63E /* GeoHash.m */; };
-		C2F03F8E19ED53BA0056A63E /* GHArea.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F8719ED53BA0056A63E /* GHArea.m */; };
-		C2F03F8F19ED53BA0056A63E /* GHNeighbors.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F8919ED53BA0056A63E /* GHNeighbors.m */; };
-		C2F03F9019ED53BA0056A63E /* GHRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F03F8B19ED53BA0056A63E /* GHRange.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
 		C220E39B19F34936009EC1F1 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
+		C23D7DCE19FE7A860025B89A /* ConfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfViewController.swift; sourceTree = "<group>"; };
 		C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Metro-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2771EFF19F2307E00CEBF58 /* betstmap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = betstmap.json; path = ../../../metro_api/static/metrodata/betstmap.json; sourceTree = "<group>"; };
 		C2771F0019F2307E00CEBF58 /* metroRailway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metroRailway.json; path = ../../../metro_api/static/metrodata/metroRailway.json; sourceTree = "<group>"; };
@@ -56,6 +59,17 @@
 		C2771F0219F2307E00CEBF58 /* metrostation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = metrostation.json; path = ../../../metro_api/static/metrodata/metrostation.json; sourceTree = "<group>"; };
 		C2771F0319F2307E00CEBF58 /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeo.json; path = ../../../metro_api/static/metrodata/stationgeo.json; sourceTree = "<group>"; };
 		C2771F0419F2307E00CEBF58 /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stationgeohash.json; path = ../../../metro_api/static/metrodata/stationgeohash.json; sourceTree = "<group>"; };
+		C2B31A3E19FE8F5000B29A01 /* GeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHash.h; sourceTree = "<group>"; };
+		C2B31A3F19FE8F5000B29A01 /* GeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHash.m; sourceTree = "<group>"; };
+		C2B31A4019FE8F5000B29A01 /* GHArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHArea.h; sourceTree = "<group>"; };
+		C2B31A4119FE8F5000B29A01 /* GHArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHArea.m; sourceTree = "<group>"; };
+		C2B31A4219FE8F5000B29A01 /* GHNeighbors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNeighbors.h; sourceTree = "<group>"; };
+		C2B31A4319FE8F5000B29A01 /* GHNeighbors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNeighbors.m; sourceTree = "<group>"; };
+		C2B31A4419FE8F5000B29A01 /* GHRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRange.h; sourceTree = "<group>"; };
+		C2B31A4519FE8F5000B29A01 /* GHRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRange.m; sourceTree = "<group>"; };
+		C2B31A4D19FE8FB700B29A01 /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgeohash.h; sourceTree = "<group>"; };
+		C2B31A4E19FE8FB700B29A01 /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgeohash.m; sourceTree = "<group>"; };
+		C2B31A5019FE989400B29A01 /* mapsample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapsample.png; sourceTree = "<group>"; };
 		C2B3F86C19F9557000C20598 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		C2F03F4619E2D4870056A63E /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,16 +84,6 @@
 		C2F03F6B19EB64BE0056A63E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C2F03F6F19EBCA950056A63E /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = json.swift; path = ../json.swift; sourceTree = "<group>"; };
 		C2F03F7119EBFD970056A63E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C2F03F8219ED53BA0056A63E /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cgeohash.h; path = "../../../objc-geohash/Classes/ARC/cgeohash.h"; sourceTree = "<group>"; };
-		C2F03F8319ED53BA0056A63E /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cgeohash.m; path = "../../../objc-geohash/Classes/ARC/cgeohash.m"; sourceTree = "<group>"; };
-		C2F03F8419ED53BA0056A63E /* GeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoHash.h; path = "../../../objc-geohash/Classes/ARC/GeoHash.h"; sourceTree = "<group>"; };
-		C2F03F8519ED53BA0056A63E /* GeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoHash.m; path = "../../../objc-geohash/Classes/ARC/GeoHash.m"; sourceTree = "<group>"; };
-		C2F03F8619ED53BA0056A63E /* GHArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHArea.h; path = "../../../objc-geohash/Classes/ARC/GHArea.h"; sourceTree = "<group>"; };
-		C2F03F8719ED53BA0056A63E /* GHArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHArea.m; path = "../../../objc-geohash/Classes/ARC/GHArea.m"; sourceTree = "<group>"; };
-		C2F03F8819ED53BA0056A63E /* GHNeighbors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHNeighbors.h; path = "../../../objc-geohash/Classes/ARC/GHNeighbors.h"; sourceTree = "<group>"; };
-		C2F03F8919ED53BA0056A63E /* GHNeighbors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHNeighbors.m; path = "../../../objc-geohash/Classes/ARC/GHNeighbors.m"; sourceTree = "<group>"; };
-		C2F03F8A19ED53BA0056A63E /* GHRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHRange.h; path = "../../../objc-geohash/Classes/ARC/GHRange.h"; sourceTree = "<group>"; };
-		C2F03F8B19ED53BA0056A63E /* GHRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHRange.m; path = "../../../objc-geohash/Classes/ARC/GHRange.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,16 +149,16 @@
 		C2F03F4819E2D4870056A63E /* Metro */ = {
 			isa = PBXGroup;
 			children = (
-				C2F03F8219ED53BA0056A63E /* cgeohash.h */,
-				C2F03F8319ED53BA0056A63E /* cgeohash.m */,
-				C2F03F8419ED53BA0056A63E /* GeoHash.h */,
-				C2F03F8519ED53BA0056A63E /* GeoHash.m */,
-				C2F03F8619ED53BA0056A63E /* GHArea.h */,
-				C2F03F8719ED53BA0056A63E /* GHArea.m */,
-				C2F03F8819ED53BA0056A63E /* GHNeighbors.h */,
-				C2F03F8919ED53BA0056A63E /* GHNeighbors.m */,
-				C2F03F8A19ED53BA0056A63E /* GHRange.h */,
-				C2F03F8B19ED53BA0056A63E /* GHRange.m */,
+				C2B31A4D19FE8FB700B29A01 /* cgeohash.h */,
+				C2B31A4E19FE8FB700B29A01 /* cgeohash.m */,
+				C2B31A3E19FE8F5000B29A01 /* GeoHash.h */,
+				C2B31A3F19FE8F5000B29A01 /* GeoHash.m */,
+				C2B31A4019FE8F5000B29A01 /* GHArea.h */,
+				C2B31A4119FE8F5000B29A01 /* GHArea.m */,
+				C2B31A4219FE8F5000B29A01 /* GHNeighbors.h */,
+				C2B31A4319FE8F5000B29A01 /* GHNeighbors.m */,
+				C2B31A4419FE8F5000B29A01 /* GHRange.h */,
+				C2B31A4519FE8F5000B29A01 /* GHRange.m */,
 				C2F03F6F19EBCA950056A63E /* json.swift */,
 				C2F03F4B19E2D4870056A63E /* AppDelegate.swift */,
 				C2F03F4D19E2D4870056A63E /* ViewController.swift */,
@@ -165,6 +169,7 @@
 				C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */,
 				C220E39B19F34936009EC1F1 /* StationManager.swift */,
 				C2B3F86C19F9557000C20598 /* TutorialViewController.swift */,
+				C23D7DCE19FE7A860025B89A /* ConfViewController.swift */,
 			);
 			path = Metro;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		C2F03F4919E2D4870056A63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C2B31A5019FE989400B29A01 /* mapsample.png */,
 				C2771EFF19F2307E00CEBF58 /* betstmap.json */,
 				C2771F0019F2307E00CEBF58 /* metroRailway.json */,
 				C2771F0119F2307E00CEBF58 /* metroRosen.json */,
@@ -294,6 +300,7 @@
 				C2771F0819F2307E00CEBF58 /* metrostation.json in Resources */,
 				C2771F0A19F2307E00CEBF58 /* stationgeohash.json in Resources */,
 				C2771F0919F2307E00CEBF58 /* stationgeo.json in Resources */,
+				C2B31A5119FE989400B29A01 /* mapsample.png in Resources */,
 				C2771F0719F2307E00CEBF58 /* metroRosen.json in Resources */,
 				C2771F0619F2307E00CEBF58 /* metroRailway.json in Resources */,
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,
@@ -347,16 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B31A4819FE8F5000B29A01 /* GHNeighbors.m in Sources */,
 				C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */,
-				C2F03F9019ED53BA0056A63E /* GHRange.m in Sources */,
 				C2B3F86D19F9557000C20598 /* TutorialViewController.swift in Sources */,
-				C2F03F8D19ED53BA0056A63E /* GeoHash.m in Sources */,
+				C2B31A4619FE8F5000B29A01 /* GeoHash.m in Sources */,
+				C2B31A4719FE8F5000B29A01 /* GHArea.m in Sources */,
+				C23D7DCF19FE7A860025B89A /* ConfViewController.swift in Sources */,
+				C2B31A4F19FE8FB700B29A01 /* cgeohash.m in Sources */,
+				C2B31A4919FE8F5000B29A01 /* GHRange.m in Sources */,
 				C2F03F7019EBCA950056A63E /* json.swift in Sources */,
 				C2F03F4E19E2D4870056A63E /* ViewController.swift in Sources */,
-				C2F03F8E19ED53BA0056A63E /* GHArea.m in Sources */,
 				C2F03F4C19E2D4870056A63E /* AppDelegate.swift in Sources */,
-				C2F03F8F19ED53BA0056A63E /* GHNeighbors.m in Sources */,
-				C2F03F8C19ED53BA0056A63E /* cgeohash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
