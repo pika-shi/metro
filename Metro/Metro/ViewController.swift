@@ -21,7 +21,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
-        if !userDef.boolForKey("tutorial") {
+        if !userDef.boolForKey("tutorial2") {
             NSLog("OK")
             let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
             moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
@@ -32,6 +32,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("tutorial") {

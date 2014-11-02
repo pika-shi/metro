@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         GMSServices.provideAPIKey(gApiKey)
         services_ = GMSServices.sharedServices()
+        var types:UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        var settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        
         return true
     }
 

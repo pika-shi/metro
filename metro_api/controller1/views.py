@@ -9,6 +9,7 @@ import json
 from src.lib.tools import Coordinate
 from src.lib import geohash
 
+
 def k_nearest_train(request,coord):
 
     now_coord=Coordinate()
