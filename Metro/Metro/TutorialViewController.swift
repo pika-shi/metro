@@ -11,43 +11,39 @@ import UIKit
 
 class TutorialViewController: UIViewController,UIScrollViewDelegate{
     
+    let page_padding:CGFloat = 30
+    var scroll_begin_point:CGPoint!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var finishBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         var pages = 3
-        var width = scrollView.frame.width
+        var width = self.view.frame.width
         var height = scrollView.frame.height
-        self.view.backgroundColor = UIColorFromRGB(0xA9D8D2)
-        scrollView.contentSize = CGSizeMake(CGFloat(pages)*width, height)
+        self.view.backgroundColor = UIColorFromRGB(0x0ea4a0)
+        let scroll_width = width+CGFloat(pages)*(width-page_padding)
+        scrollView.frame = CGRectMake(0, 0, width, height)
+        scrollView.bounds = CGRectMake(0, 0, 50, height)
+
+        scrollView.contentSize = CGSizeMake(scroll_width, height)
         scrollView.pagingEnabled = true
         scrollView.scrollEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.userInteractionEnabled = true
+        
         scrollView.delegate = self
         
         
         carouselViewSet(0, mes: "説明1")
         carouselViewSet(1, mes: "説明2")
         carouselViewSet(2, mes: "説明3")
-//        var endButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
-//        endButton.frame = CGRectMake(width*2+180, 600, 172, 44)
-//        endButton.setTitle("初期登録へ", forState: .Normal)
-//        endButton.setTitle("初期登録へ", forState: .Highlighted)
-//        endButton.setTitleColor(UIColor.whiteColor(), forState:.Normal)
-//        endButton.setTitleColor(UIColor.whiteColor(), forState:.Highlighted)
-//        endButton.backgroundColor = UIColorFromRGB(0xED8472)
-//        endButton.layer.cornerRadius = 5
-//        endButton.addTarget(self, action: "endTutorial:", forControlEvents: .TouchUpInside)
-//        scrollView.addSubview(endButton)
-        buttonSet(0, title: "次へ", x: 180, y: 400,type:BButtonType.Success)
-        buttonSet(1, title: "前へ", x: 10, y: 400,type:BButtonType.Warning)
-        buttonSet(1, title: "次へ", x: 190, y: 400,type:BButtonType.Primary)
-        buttonSet(2, title: "前へ", x: 10, y: 400,type:BButtonType.Info)
-        var finishBtn = buttonSet(2, title: "初期登録へ", x: 190, y: 400,type:BButtonType.Default)
+
+        
+        finishBtn.backgroundColor = UIColorFromRGB(0x0ea4a0)
         finishBtn.addTarget(self, action: "endTutorial", forControlEvents: .TouchUpInside)
 
         
@@ -72,12 +68,23 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     }
     
     func carouselViewSet(page:CGFloat,mes:String ){
-        var labelposx:CGFloat = scrollView.frame.width*page;
-        var backView:UIView = UIView(frame: CGRectMake(labelposx, 0, scrollView.frame.width, scrollView.frame.height))
-        backView.backgroundColor = UIColorFromRGB(0xA9D8D2)
-        var centerView:UIView = UIView(frame: CGRectMake(labelposx+scrollView.frame.width/5, scrollView.frame.height/7, scrollView.frame.width*3/5, scrollView.frame.height*4/7))
-        centerView.backgroundColor = UIColorFromRGB(0xEDF7F5)
-        var label:UILabel = UILabel(frame: CGRectMake(labelposx, 330, scrollView.frame.width, 100))
+        var labelposx:CGFloat = (320-0*page_padding)*page;
+        let backx = labelposx
+        let backwidth = self.view.frame.width
+        var backView:UIView = UIView(frame: CGRectMake(backx, 0, backwidth, scrollView.frame.height))
+//        if(page==2){
+//            backView.backgroundColor = UIColorFromRGB(0xff0000)
+//        }else if(page==1){
+//            backView.backgroundColor = UIColorFromRGB(0x00ff00)
+//        }else{
+//            backView.backgroundColor = UIColorFromRGB(0x0000ff)
+//        }
+        backView.backgroundColor = UIColorFromRGB(0x0ea4a0)
+        let centerx = labelposx+page_padding
+        let centerwidth:CGFloat = 320-page_padding*2
+        var centerView:UIView = UIView(frame: CGRectMake(centerx, scrollView.frame.height/7, centerwidth, scrollView.frame.height*6/7))
+        centerView.backgroundColor = UIColorFromRGB(0xEEE4E0)
+        var label:UILabel = UILabel(frame: CGRectMake(centerx,scrollView.frame.height/7, centerwidth, 100))
         label.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 1, alpha: 0.8)
         label.text = mes
         scrollView.addSubview(backView)
@@ -87,11 +94,25 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         NSLog("scrolled!");
-        var pageWidth : CGFloat = self.scrollView.frame.size.width
+                var pageWidth : CGFloat = self.scrollView.frame.size.width
         var fractionalPage : Double = Double(self.scrollView.contentOffset.x / pageWidth)
         var page : NSInteger = lround(fractionalPage)
         self.pageControl.currentPage = page;
+        
     }
+//    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+//        scroll_begin_point = scrollView.contentOffset
+//    }
+//    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        if (scroll_begin_point.x > scrollView.contentOffset.x){
+//            self.pageControl.currentPage += 1
+//            self.scrollView.setContentOffset(CGPointMake(320,0), animated: true)
+//        }else{
+//            self.pageControl.currentPage -= 1
+//            self.scrollView.setContentOffset(CGPointMake(320,0), animated: true)
+//        }
+//
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -110,6 +131,8 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         var userDef = NSUserDefaults.standardUserDefaults()
         userDef.setBool(true,forKey:"tutorial")
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+    
         
     }
 }

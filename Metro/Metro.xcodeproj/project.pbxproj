@@ -13,6 +13,11 @@
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
 		C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39B19F34936009EC1F1 /* StationManager.swift */; };
 		C23D7DCF19FE7A860025B89A /* ConfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D7DCE19FE7A860025B89A /* ConfViewController.swift */; };
+		C2AB7DEF1A06037200CE7540 /* aboutyou_kanryou_03.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AB7DEA1A06037200CE7540 /* aboutyou_kanryou_03.png */; };
+		C2AB7DF01A06037200CE7540 /* aboutyou_tojiru_03.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AB7DEB1A06037200CE7540 /* aboutyou_tojiru_03.png */; };
+		C2AB7DF11A06037200CE7540 /* home_03.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AB7DEC1A06037200CE7540 /* home_03.png */; };
+		C2AB7DF21A06037200CE7540 /* home_06.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AB7DED1A06037200CE7540 /* home_06.png */; };
+		C2AB7DF31A06037200CE7540 /* setteihe_03.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AB7DEE1A06037200CE7540 /* setteihe_03.png */; };
 		C2B31A4619FE8F5000B29A01 /* GeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A3F19FE8F5000B29A01 /* GeoHash.m */; };
 		C2B31A4719FE8F5000B29A01 /* GHArea.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4119FE8F5000B29A01 /* GHArea.m */; };
 		C2B31A4819FE8F5000B29A01 /* GHNeighbors.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B31A4319FE8F5000B29A01 /* GHNeighbors.m */; };
@@ -50,6 +55,11 @@
 		C220E39B19F34936009EC1F1 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		C23D7DCE19FE7A860025B89A /* ConfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfViewController.swift; sourceTree = "<group>"; };
 		C2771EFC19F22BE200CEBF58 /* Metro-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Metro-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2AB7DEA1A06037200CE7540 /* aboutyou_kanryou_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutyou_kanryou_03.png; sourceTree = "<group>"; };
+		C2AB7DEB1A06037200CE7540 /* aboutyou_tojiru_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutyou_tojiru_03.png; sourceTree = "<group>"; };
+		C2AB7DEC1A06037200CE7540 /* home_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_03.png; sourceTree = "<group>"; };
+		C2AB7DED1A06037200CE7540 /* home_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_06.png; sourceTree = "<group>"; };
+		C2AB7DEE1A06037200CE7540 /* setteihe_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setteihe_03.png; sourceTree = "<group>"; };
 		C2B31A3E19FE8F5000B29A01 /* GeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHash.h; sourceTree = "<group>"; };
 		C2B31A3F19FE8F5000B29A01 /* GeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHash.m; sourceTree = "<group>"; };
 		C2B31A4019FE8F5000B29A01 /* GHArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHArea.h; sourceTree = "<group>"; };
@@ -123,6 +133,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C2AB7DE91A06037200CE7540 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C2AB7DEA1A06037200CE7540 /* aboutyou_kanryou_03.png */,
+				C2AB7DEB1A06037200CE7540 /* aboutyou_tojiru_03.png */,
+				C2AB7DEC1A06037200CE7540 /* home_03.png */,
+				C2AB7DED1A06037200CE7540 /* home_06.png */,
+				C2AB7DEE1A06037200CE7540 /* setteihe_03.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		C2F03F3D19E2D4870056A63E = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +170,7 @@
 		C2F03F4819E2D4870056A63E /* Metro */ = {
 			isa = PBXGroup;
 			children = (
+				C2AB7DE91A06037200CE7540 /* assets */,
 				72F116891A05FA1F00297F7B /* Jsons */,
 				C2B31A4D19FE8FB700B29A01 /* cgeohash.h */,
 				C2B31A4E19FE8FB700B29A01 /* cgeohash.m */,
@@ -288,9 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */,
+				C2AB7DF21A06037200CE7540 /* home_06.png in Resources */,
+				C2AB7DF11A06037200CE7540 /* home_03.png in Resources */,
+				C2AB7DF31A06037200CE7540 /* setteihe_03.png in Resources */,
 				72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */,
 				C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */,
 				C2F03F5619E2D4870056A63E /* LaunchScreen.xib in Resources */,
+				C2AB7DEF1A06037200CE7540 /* aboutyou_kanryou_03.png in Resources */,
+				C2AB7DF01A06037200CE7540 /* aboutyou_tojiru_03.png in Resources */,
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
