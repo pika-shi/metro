@@ -13,11 +13,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
 
     @IBOutlet weak var setting_button: UIButton!
     @IBOutlet weak var info_label: UILabel!
+    @IBOutlet weak var mapView: GMSMapView!
     
     var calloutView :SMCalloutView?
     let defaultRadius = 300
-    
+    var location:CLLocation!
     var l_manager:CLLocationManager!
+    var lat:Double!
+    var lon:Double!
     
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
@@ -29,6 +32,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             self.presentViewController(moveTutorial, animated: true, completion: nil)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,24 +51,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             l_manager.delegate = self
             l_manager.desiredAccuracy = kCLLocationAccuracyBest
             l_manager.requestAlwaysAuthorization()
-            l_manager.distanceFilter = 300
-            l_manager.startUpdatingLocation()
-        
-        
-        
-        
-            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(35.690667,longitude:139.7685037, zoom: 16)
-            var mapView:GMSMapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-            mapView.delegate = self
-            mapView.myLocationEnabled = true
-            self.view = mapView
-        
-            //マーカーをたてる
-            let marker:GMSMarker = GMSMarker()
-            marker.position = CLLocationCoordinate2DMake(35.690667, 139.7685037)
-            marker.title = "現在地"
-            marker.snippet = "ここだよ〜"
-            marker.map = mapView
+            //l_manager.distanceFilter = 300
+            
         }
     }
 
@@ -82,9 +70,24 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         self.presentViewController(moveConfig, animated: true, completion: nil)
     }
     
-    //位置情報取得
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .Authorized {
+            l_manager.startUpdatingLocation()
+        }
+    }
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println("OKOK \(locations)")
+        location = locations.last as CLLocation
+        lat = location.coordinate.latitude
+        lon = location.coordinate.longitude
+        println("\(lat) \(lon)")
+        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+        mapView.camera = camera
+        var marker:GMSMarker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(lat, lon)
+        marker.title = "現在地"
+        marker.snippet = "ここだよ〜"
+        marker.map = mapView
     }
 
 }
