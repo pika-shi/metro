@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
+		72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168A1A05FA1F00297F7B /* stationgeo.json */; };
+		72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168B1A05FA1F00297F7B /* stationgeohash.json */; };
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
 		C220E39C19F34936009EC1F1 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39B19F34936009EC1F1 /* StationManager.swift */; };
 		C23D7DCF19FE7A860025B89A /* ConfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D7DCE19FE7A860025B89A /* ConfViewController.swift */; };
@@ -42,6 +44,8 @@
 		42A223C1891E87B0AB218974 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F1168A1A05FA1F00297F7B /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeo.json; sourceTree = "<group>"; };
+		72F1168B1A05FA1F00297F7B /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeohash.json; sourceTree = "<group>"; };
 		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
 		C220E39B19F34936009EC1F1 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		C23D7DCE19FE7A860025B89A /* ConfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72F116891A05FA1F00297F7B /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				72F1168A1A05FA1F00297F7B /* stationgeo.json */,
+				72F1168B1A05FA1F00297F7B /* stationgeohash.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
 		733A7A16DAAEA8140D7AF07B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 		C2F03F4819E2D4870056A63E /* Metro */ = {
 			isa = PBXGroup;
 			children = (
+				72F116891A05FA1F00297F7B /* Jsons */,
 				C2B31A4D19FE8FB700B29A01 /* cgeohash.h */,
 				C2B31A4E19FE8FB700B29A01 /* cgeohash.m */,
 				C2B31A3E19FE8F5000B29A01 /* GeoHash.h */,
@@ -273,6 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */,
+				72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */,
 				C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */,
 				C2F03F5619E2D4870056A63E /* LaunchScreen.xib in Resources */,
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,

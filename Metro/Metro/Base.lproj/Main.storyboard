@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPs-dV-qDO" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="97" width="320" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75k-i7-ND3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
@@ -61,12 +65,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="info_label" destination="0Lg-OI-7iX" id="IhJ-VB-KU4"/>
+                        <outlet property="mapView" destination="KPs-dV-qDO" id="5R3-Cg-UPS"/>
                         <outlet property="setting_button" destination="JDQ-36-wzj" id="P3y-K6-dPh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251.5" y="150.5"/>
+            <point key="canvasLocation" x="251" y="150"/>
         </scene>
         <!--Conf View Controller-->
         <scene sceneID="Jhg-8B-dDh">

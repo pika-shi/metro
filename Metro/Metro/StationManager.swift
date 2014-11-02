@@ -21,7 +21,7 @@ public class StationManager{
         self.currentLocation.longitude = lon
     }
     
-    public func getNearTrains()->Bool{
+    public func getNearStation(lat:Double, lon:Double)->JSON {
         var fpath = NSBundle.mainBundle().pathForResource("stationgeohash", ofType: "json")
         var data = NSData(contentsOfFile: fpath!)
         var gh_json:JSON = JSON.parse(NSString(data: data!, encoding: NSUTF8StringEncoding)!)
@@ -44,7 +44,7 @@ public class StationManager{
         
         searchGeohash[geohash]=true
         for _ in 1...10 {
-            if nearStations.count > 5 {
+            if nearStations.count > 0 {
                 break
             }
             for sgh in searchGeohash.keys {
@@ -76,8 +76,7 @@ public class StationManager{
         println("near stations are")
         println(nearStations)
         
-//        return nearStations
-        return true
+        return nearStations
         
     }
 }
