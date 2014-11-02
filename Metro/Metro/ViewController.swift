@@ -75,6 +75,13 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         }
     }
     
+    @IBAction func moveToTutorial(sender: AnyObject) {
+        NSLog("button pushed")
+        let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
+        moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
+        
+        self.presentViewController(moveTutorial, animated: true, completion: nil)
+    }
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
