@@ -43,11 +43,11 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
 //        endButton.layer.cornerRadius = 5
 //        endButton.addTarget(self, action: "endTutorial:", forControlEvents: .TouchUpInside)
 //        scrollView.addSubview(endButton)
-        buttonSet(0, title: "次へ", x: 180, y: 600,type:BButtonType.Success)
-        buttonSet(1, title: "前へ", x: 10, y: 600,type:BButtonType.Warning)
-        buttonSet(1, title: "次へ", x: 190, y: 600,type:BButtonType.Primary)
-        buttonSet(2, title: "前へ", x: 10, y: 600,type:BButtonType.Info)
-        var finishBtn = buttonSet(2, title: "初期登録へ", x: 190, y: 600,type:BButtonType.Default)
+        buttonSet(0, title: "次へ", x: 180, y: 400,type:BButtonType.Success)
+        buttonSet(1, title: "前へ", x: 10, y: 400,type:BButtonType.Warning)
+        buttonSet(1, title: "次へ", x: 190, y: 400,type:BButtonType.Primary)
+        buttonSet(2, title: "前へ", x: 10, y: 400,type:BButtonType.Info)
+        var finishBtn = buttonSet(2, title: "初期登録へ", x: 190, y: 400,type:BButtonType.Default)
         finishBtn.addTarget(self, action: "endTutorial", forControlEvents: .TouchUpInside)
 
         
@@ -77,7 +77,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         backView.backgroundColor = UIColorFromRGB(0xA9D8D2)
         var centerView:UIView = UIView(frame: CGRectMake(labelposx+scrollView.frame.width/5, scrollView.frame.height/7, scrollView.frame.width*3/5, scrollView.frame.height*4/7))
         centerView.backgroundColor = UIColorFromRGB(0xEDF7F5)
-        var label:UILabel = UILabel(frame: CGRectMake(labelposx, 430, scrollView.frame.width, 237))
+        var label:UILabel = UILabel(frame: CGRectMake(labelposx, 330, scrollView.frame.width, 100))
         label.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 1, alpha: 0.8)
         label.text = mes
         scrollView.addSubview(backView)

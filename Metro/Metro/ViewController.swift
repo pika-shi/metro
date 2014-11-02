@@ -17,8 +17,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var calloutView :SMCalloutView?
     let defaultRadius = 300
     
-    @IBOutlet weak var innerView: UIView!
-    
     var l_manager:CLLocationManager!
     
     override func viewDidAppear(animated: Bool) {
@@ -57,7 +55,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             var mapView:GMSMapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
             mapView.delegate = self
             mapView.myLocationEnabled = true
-            self.innerView = mapView
+            self.view = mapView
         
             //マーカーをたてる
             let marker:GMSMarker = GMSMarker()
