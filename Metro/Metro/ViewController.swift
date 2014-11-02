@@ -39,6 +39,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("tutorial") {
             NSLog("NG")
