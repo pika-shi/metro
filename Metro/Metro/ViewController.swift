@@ -14,9 +14,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBOutlet weak var setting_button: UIButton!
     @IBOutlet weak var info_label: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
-    
     var calloutView :SMCalloutView?
     let defaultRadius = 300
+    var stationManager:StationManager!
     var location:CLLocation!
     var l_manager:CLLocationManager!
     var lat:Double!
@@ -34,24 +34,23 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("tutorial") {
-           NSLog("NG")
-        
-        
-        
-        
-            //現在地の情報を取得
-            l_manager = CLLocationManager()
-            l_manager.delegate = self
-            l_manager.desiredAccuracy = kCLLocationAccuracyBest
-            l_manager.requestAlwaysAuthorization()
-            //l_manager.distanceFilter = 300
-            
+            NSLog("NG")
         }
+        
+        l_manager = CLLocationManager()
+        l_manager.delegate = self
+        l_manager.desiredAccuracy = kCLLocationAccuracyBest
+        l_manager.requestAlwaysAuthorization()
+        l_manager.distanceFilter = 300
+        
+        stationManager = StationManager()
     }
 
     
@@ -86,6 +85,17 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         marker.title = "現在地"
         marker.snippet = "ここだよ〜"
         marker.map = mapView
+        var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
+        println(lat)
+        println(lon)
+        println(stationCoordinate.1)
+        println(stationCoordinate.0)
+        var path:GMSMutablePath = GMSMutablePath()
+        path.addCoordinate(CLLocationCoordinate2DMake(lat,lon))
+        path.addCoordinate(CLLocationCoordinate2DMake(stationCoordinate.0,stationCoordinate.1))
+        var rectangle:GMSPolyline = GMSPolyline(path: path)
+        rectangle.map = mapView
+        
     }
 
 }

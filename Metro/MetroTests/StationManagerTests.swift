@@ -16,7 +16,7 @@ class StationManagerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        st=StationManager(CLLocationCoordinate2DMake(35.690667,139.7685037))
+        st=StationManager()
         
         
     }

@@ -24,14 +24,6 @@ class MetroTests: XCTestCase {
     
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        var st:StationManager=StationManager(CLLocationCoordinate2DMake(35.690667,139.7685037))
-        
-        XCTAssert(st.getNearTrains(), "pass2")
-        XCTAssert(true, "Pass")
-    }
-    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
