@@ -15,6 +15,8 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
 
     @IBOutlet weak var textview: UITextField!
     @IBOutlet weak var finishButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textview.returnKeyType = UIReturnKeyType.Done
