@@ -80,7 +80,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
         println("\(lat) \(lon)")
-        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 17)
         mapView.camera = camera
         var marker:GMSMarker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(lat, lon)
@@ -88,16 +88,30 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         marker.snippet = "ここだよ〜"
         marker.map = mapView
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
-        println(lat)
-        println(lon)
-        println(stationCoordinate.1)
-        println(stationCoordinate.0)
         var path:GMSMutablePath = GMSMutablePath()
         path.addCoordinate(CLLocationCoordinate2DMake(lat,lon))
         path.addCoordinate(CLLocationCoordinate2DMake(stationCoordinate.0,stationCoordinate.1))
         var rectangle:GMSPolyline = GMSPolyline(path: path)
+        rectangle.strokeWidth = 5;
         rectangle.map = mapView
         
+        let manager:AFHTTPSessionManager = AFHTTPSessionManager()
+        let requestSerializer:AFJSONRequestSerializer = AFJSONRequestSerializer()
+        let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
+        manager.responseSerializer = responseSerializer
+        manager.requestSerializer = requestSerializer
+        manager.GET("http://maps.googleapis.com/maps/api/directions/json?origin=\(lat),\(lon)&destination=\(stationCoordinate.0),\(stationCoordinate.1)&sensor=false", parameters: nil,
+            success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
+                println(response.description.stringByReplacingOccurrencesOfString("(", withString: "[", options: nil, range: nil).stringByReplacingOccurrencesOfString(")", withString: "]", options: nil, range: nil))
+                var directionsJson:JSON = JSON.parse(response.description.stringByReplacingOccurrencesOfString("(", withString: "[", options: nil, range: nil).stringByReplacingOccurrencesOfString(")", withString: "]", options: nil, range: nil))
+                //println(directionsJson["routes"].asString)
+                println("http://maps.googleapis.com/maps/api/directions/json?origin=\(self.lat),\(self.lon)&destination=\(stationCoordinate.0),\(stationCoordinate.1)&sensor=false")
+
+            },
+            failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
+                println("Error!!")
+            }
+        )
     }
 
 }
