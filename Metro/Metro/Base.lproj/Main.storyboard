@@ -23,7 +23,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-36-wzj">
-                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="519" width="320" height="48"/>
                                 <color key="backgroundColor" red="0.24313725489999999" green="0.5450980392" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="情報表示">
