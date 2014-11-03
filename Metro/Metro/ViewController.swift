@@ -21,6 +21,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var l_manager:CLLocationManager!
     var lat:Double!
     var lon:Double!
+    var routeLat:Double!
+    var routeLon:Double!
     
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
@@ -82,12 +84,13 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         self.presentViewController(moveTutorial, animated: true, completion: nil)
     }
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
         println("\(lat) \(lon)")
-        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 17)
+        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
         mapView.camera = camera
         var marker:GMSMarker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(lat, lon)
@@ -96,30 +99,27 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         marker.map = mapView
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         var path:GMSMutablePath = GMSMutablePath()
-        path.addCoordinate(CLLocationCoordinate2DMake(lat,lon))
-        path.addCoordinate(CLLocationCoordinate2DMake(stationCoordinate.0,stationCoordinate.1))
-        var rectangle:GMSPolyline = GMSPolyline(path: path)
-        rectangle.strokeWidth = 5;
-        rectangle.map = mapView
         
         let manager:AFHTTPSessionManager = AFHTTPSessionManager()
         let requestSerializer:AFJSONRequestSerializer = AFJSONRequestSerializer()
         let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        manager.GET("http://maps.googleapis.com/maps/api/directions/json?origin=\(lat),\(lon)&destination=\(stationCoordinate.0),\(stationCoordinate.1)&sensor=false", parameters: nil,
+        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
-                println(response.description.stringByReplacingOccurrencesOfString("(", withString: "[", options: nil, range: nil).stringByReplacingOccurrencesOfString(")", withString: "]", options: nil, range: nil))
-                var directionsJson:JSON = JSON.parse(response.description.stringByReplacingOccurrencesOfString("(", withString: "[", options: nil, range: nil).stringByReplacingOccurrencesOfString(")", withString: "]", options: nil, range: nil))
-                //println(directionsJson["routes"].asString)
-                println("http://maps.googleapis.com/maps/api/directions/json?origin=\(self.lat),\(self.lon)&destination=\(stationCoordinate.0),\(stationCoordinate.1)&sensor=false")
-
-            },
+                for coordinate in response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",") {
+                    self.routeLat = NSString(string:coordinate.componentsSeparatedByString(":")[0]).doubleValue
+                    self.routeLon = NSString(string:coordinate.componentsSeparatedByString(":")[1]).doubleValue
+                    path.addCoordinate(CLLocationCoordinate2DMake(self.routeLat, self.routeLon))
+                }
+                var rectangle:GMSPolyline = GMSPolyline(path: path)
+                rectangle.strokeWidth = 4;
+                rectangle.map = self.mapView
+        },
             failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
                 println("Error!!")
             }
         )
     }
-
 }
 
