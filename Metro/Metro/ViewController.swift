@@ -84,6 +84,10 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         self.presentViewController(moveTutorial, animated: true, completion: nil)
     }
     
+    @IBAction func locationHead(sender: AnyObject) {
+    }
+    
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         location = locations.last as CLLocation
         lat = location.coordinate.latitude

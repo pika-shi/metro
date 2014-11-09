@@ -25,7 +25,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         var width = self.view.frame.width
         var height = scrollView.frame.height
         self.view.backgroundColor = UIColorFromRGB(0x0ea4a0)
-        let scroll_width = width+CGFloat(pages)*(width-page_padding)
+        let scroll_width = CGFloat(pages)*width
         scrollView.frame = CGRectMake(0, 0, width, height)
         scrollView.bounds = CGRectMake(0, 0, 50, height)
 

@@ -58,6 +58,9 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="locationHead:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c03-i9-6mO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amd-cd-PYA">
                                         <rect key="frame" x="253" y="0.0" width="47" height="50"/>
