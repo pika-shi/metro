@@ -27,6 +27,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var lastTrainRestTime:Int!
     var departureRestTime:Int!
     var returnArray:Array<String>!
+    var isTrack:Bool = true
     
 
     @IBOutlet weak var currentLocationImage: UIImageView!
@@ -91,11 +92,11 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     @IBAction func locationHead(sender: AnyObject) {
         var userDef = NSUserDefaults.standardUserDefaults()
-        if userDef.boolForKey("track") {
-            userDef.setBool(false, forKey: "track")
+        if isTrack {
+            isTrack = false
 //            currentLocationImage.image = UIImage(named: "home_07")
         }else{
-            userDef.setBool(true, forKey: "track")
+            isTrack = true
             currentLocationImage.image = UIImage(named: "home_06")
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.animateToCameraPosition(camera)
@@ -110,12 +111,11 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var userDef = NSUserDefaults.standardUserDefaults()
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
         println("\(lat) \(lon)")
-        if userDef.boolForKey("track"){
+        if isTrack{
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.camera = camera
         }
@@ -155,11 +155,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
-        var userDef = NSUserDefaults.standardUserDefaults()
-        let sw = userDef.boolForKey("track")
-        NSLog("camera changed,iscamera=\(sw)")
-
-        userDef.setBool(false, forKey: "track")
+        NSLog("camera changed,iscamera=\(isTrack)")
+        isTrack = false
 //        currentLocationImage.image = UIImage(named: "home_07")
 
     }
