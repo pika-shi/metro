@@ -112,15 +112,10 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     @IBAction func locationHead(sender: AnyObject) {
         var userDef = NSUserDefaults.standardUserDefaults()
-        if isTrack {
-            isTrack = false
-            currentLocationImage.image = UIImage(named: "home_07")
-        }else{
-            isTrack = true
-            trackAllow = false
-            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
-            mapView.animateToCameraPosition(camera)
-        }
+
+        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+        mapView.animateToCameraPosition(camera)
+
         print("head,isTrack=\(isTrack),trackAllow=\(trackAllow)")
     }
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
@@ -188,8 +183,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
-        lat = 35.6508225
-        lon = 139.7013585
+
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         
         var path:GMSMutablePath = GMSMutablePath()
@@ -220,19 +214,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             }
         )
         
-        departureRestTime = 20
-        lastTrainRestTime = 45
+
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
-<<<<<<< HEAD
             lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
             if departureRestTime <= 30 {
                 if userDef.integerForKey("lastNotifyDate2") != components.day{
-=======
-            if departureRestTime <= 30 && userDef.integerForKey("lastNotifyDate") != components.day{
->>>>>>> 21c0208df1a526d1c4d408b31c6c65c52f12d2de
                
                     var local_notify = UILocalNotification()
                     local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)
