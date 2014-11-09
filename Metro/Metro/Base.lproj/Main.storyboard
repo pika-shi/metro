@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.95000001192092909" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-C8-ZKv">
-                                <rect key="frame" x="0.0" y="215" width="320" height="353"/>
+                                <rect key="frame" x="0.0" y="337" width="320" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwb-A7-N4C">
                                         <rect key="frame" x="140" y="8" width="41" height="26"/>
@@ -113,33 +113,23 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="通知する時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS1-ml-6JX">
-                                        <rect key="frame" x="12" y="182" width="102" height="21"/>
-                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
-                                        <color key="textColor" red="0.015686274509803921" green="0.21176470588235294" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最寄り駅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBE-pK-uX1">
-                                        <rect key="frame" x="12" y="67" width="82" height="19"/>
+                                        <rect key="frame" x="12" y="57" width="82" height="19"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                         <color key="textColor" red="0.015686274509803921" green="0.21176470588235294" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-FB-zqC">
-                                        <rect key="frame" x="0.0" y="211" width="320" height="38"/>
-                                        <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-mQ-vCP">
-                                        <rect key="frame" x="0.0" y="93" width="320" height="38"/>
+                                        <rect key="frame" x="0.0" y="83" width="320" height="38"/>
                                         <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに入力してください" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-9i-gzE">
-                                        <rect key="frame" x="15" y="93" width="315" height="38"/>
+                                        <rect key="frame" x="15" y="83" width="315" height="38"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpI-gm-co8">
-                                        <rect key="frame" x="16" y="284" width="288" height="55"/>
+                                        <rect key="frame" x="16" y="156" width="288" height="55"/>
                                         <color key="backgroundColor" red="0.054901960784313725" green="0.64313725490196072" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="aboutyou_kanryou_03.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,18 +139,11 @@
                                             <action selector="endConfig:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="rCM-pK-FRs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-qT-EJq">
-                                        <rect key="frame" x="0.0" y="211" width="320" height="38"/>
-                                        <state key="normal" title="5分前">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aboutyou_tojiru_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="A8H-N1-EeA">
                                         <rect key="frame" x="286" y="10" width="22" height="22"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-sy-aN6">
-                                        <rect key="frame" x="280" y="4" width="34" height="34"/>
+                                        <rect key="frame" x="270" y="0.0" width="50" height="42"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
