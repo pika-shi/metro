@@ -161,7 +161,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
         NSLog("camera changed,isTrack=\(isTrack),trackAllow=\(trackAllow)")
-            if position.target.latitude == lat && position.target.longitude == lon {
+            if position.target.latitude == lat! && position.target.longitude == lon! {
                 isTrack = true
                 currentLocationImage.image = UIImage(named: "home_06")
             }else{
