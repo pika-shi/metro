@@ -61,6 +61,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         mapView.delegate = self
         stationManager = StationManager()
+        userDef.setBool(true, forKey: "track")
+        
     }
 
 
@@ -94,12 +96,12 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("track") {
             userDef.setBool(false, forKey: "track")
+//            currentLocationImage.image = UIImage(named: "home_07")
+        }else{
+            userDef.setBool(true, forKey: "track")
             currentLocationImage.image = UIImage(named: "home_06")
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.animateToCameraPosition(camera)
-        }else{
-            userDef.setBool(true, forKey: "track")
-            currentLocationImage.image = UIImage(named: "home_07")
         }
     }
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
@@ -155,10 +157,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
-        NSLog("camera changed")
+
         var userDef = NSUserDefaults.standardUserDefaults()
+        let sw = userDef.boolForKey("track")
+        NSLog("camera changed,iscamera=\(sw)")
+
         userDef.setBool(false, forKey: "track")
-        currentLocationImage.image = UIImage(named: "home_07")
+//        currentLocationImage.image = UIImage(named: "home_07")
+
     }
 
 }
