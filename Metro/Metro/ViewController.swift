@@ -24,6 +24,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var routeLat:Double!
     var routeLon:Double!
     var startPosition:CGPoint!
+    var restTime:Int!
+    var returnArray:Array<String>!
+    
 
     @IBOutlet weak var currentLocationImage: UIImageView!
     override func viewDidAppear(animated: Bool) {
@@ -131,7 +134,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
-                    for coordinate in response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",") {
+                    self.returnArray = response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",")
+                    self.restTime = self.returnArray[0].toInt()!
+                    for coordinate in Array(self.returnArray[1...self.returnArray.count-1]) {
                         self.routeLat = NSString(string:coordinate.componentsSeparatedByString(":")[0]).doubleValue
                         self.routeLon = NSString(string:coordinate.componentsSeparatedByString(":")[1]).doubleValue
                         path.addCoordinate(CLLocationCoordinate2DMake(self.routeLat, self.routeLon))
