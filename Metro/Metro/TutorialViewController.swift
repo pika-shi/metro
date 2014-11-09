@@ -81,6 +81,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         labelView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
         var label:UILabel = UILabel(frame: CGRectMake(centerx+5,55, centerwidth-10, 100))
         label.text = mes
+        label.font = UIFont(name: "", size: 18)
         label.numberOfLines = 0
         scrollView.addSubview(backView)
         scrollView.addSubview(centerView)
@@ -119,6 +120,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         
         var userDef = NSUserDefaults.standardUserDefaults()
         userDef.setBool(true,forKey:"tutorial")
+        userDef.setBool(true, forKey: "firstconfig")
         self.dismissViewControllerAnimated(true, completion: nil)
         
     
