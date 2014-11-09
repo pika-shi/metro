@@ -64,7 +64,7 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         println("length=\(json.length)")
         for key in json.generate() {
             if stationName == (key.0 as String){
-                SVProgressHUD.dismiss()
+
                 return true
             }
             let firstobj = key.1.asDictionary
@@ -75,12 +75,12 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
                 println(romatmp)
                 let romaName:String = split(romatmp!,{ $0 == "."})[3]
                 if stationName.lowercaseString == romaName.lowercaseString{
-                    SVProgressHUD.dismiss()
+
                     return true
                 }
             }
         }
-        SVProgressHUD.dismiss()
+
         return false
     }
     func dispatch_async_main(block: () -> ()) {
@@ -93,17 +93,26 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
     
     @IBAction func finishButton(sender: AnyObject) {
         SVProgressHUD.show()
-      
-            if stationNameValidate(textview.text) {
-                var userDef = NSUserDefaults.standardUserDefaults()
-                userDef.setBool(false, forKey: "firstconfig")
-                println(self.textview.text)
-                ud.setObject(self.textview.text, forKey: "station")
-                ud.synchronize()
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }else{
-                errorLabel.text = "駅名を入力してください"
+        textview.hidden = true
+        dispatch_async_global{
+            var sw = self.stationNameValidate(self.textview.text)
+            
+            self.dispatch_async_main{
+                if sw {
+                    var userDef = NSUserDefaults.standardUserDefaults()
+                    userDef.setBool(false, forKey: "firstconfig")
+                    println(self.textview.text)
+                    self.ud.setObject(self.textview.text, forKey: "station")
+                    self.ud.synchronize()
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }else{
+                    self.errorLabel.text = "駅名を入力してください"
+                }
+                SVProgressHUD.dismiss()
+                self.textview.hidden = false
             }
+        }
+        
         
     }
     @IBAction func closeButton(sender: AnyObject) {
