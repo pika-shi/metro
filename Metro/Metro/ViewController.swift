@@ -37,8 +37,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if !userDef.boolForKey("tutorial") {
             let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
             moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
-            
             self.presentViewController(moveTutorial, animated: true, completion: nil)
+            
         }
         println("didappear,istrack = \(isTrack)")
         isTrack = true

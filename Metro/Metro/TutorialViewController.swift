@@ -39,7 +39,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         
         
         carouselViewSet(0, mes: "はじめに、設定画面で自宅からの最寄り駅を設定して下さい。", image: "carousel2.png")
-        carouselViewSet(1, mes: "あとはポケットにしまっておくだけ。終電の時間が近づいてくるとプッシュ通知をおこないます。", image: "carousel1.png")
+        carouselViewSet(1, mes: "あとはポケットにしまっておくだけ。終電の時間が近づいてくるとアプリがプッシュ通知をおこないます。", image: "carousel1.png")
 
         
         finishBtn.backgroundColor = UIColorFromRGB(0x0ea4a0)
@@ -78,8 +78,8 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         var centerView:UIImageView = UIImageView(frame: CGRectMake(centerx, 50, centerwidth, 469))
         centerView.image = centerImage
         var labelView:UIView = UIView(frame: CGRectMake(centerx, 50, centerwidth, 100))
-        labelView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
-        var label:UILabel = UILabel(frame: CGRectMake(centerx+10,55, centerwidth-20, 100))
+        labelView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+        var label:UILabel = UILabel(frame: CGRectMake(centerx+5,55, centerwidth-10, 100))
         label.text = mes
         label.numberOfLines = 0
         scrollView.addSubview(backView)
