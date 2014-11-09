@@ -44,9 +44,12 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             self.presentViewController(moveTutorial, animated: true, completion: nil)
             
         }
+        if userDef.boolForKey("firstconfig"){
+            settings(setting_button)
+        }
         println("didappear,istrack = \(isTrack)")
         isTrack = true
-//        timer = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(300, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
     }
     
     override func viewDidLoad() {
@@ -184,6 +187,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
 
+        lat = 35.6508225
+        lon = 139.7013585
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         
         var path:GMSMutablePath = GMSMutablePath()
@@ -215,13 +220,15 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         )
         
 
+        lastTrainRestTime = 45
+        departureRestTime = 21
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
             lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
             if departureRestTime <= 30 {
-                if userDef.integerForKey("lastNotifyDate2") != components.day{
+                if userDef.integerForKey("lastNotifyDate") != components.day{
                
                     var local_notify = UILocalNotification()
                     local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)

@@ -22,6 +22,13 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         super.viewDidLoad()
         self.textview.returnKeyType = UIReturnKeyType.Done
         self.textview.delegate = self
+        
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if userDef.boolForKey("firstconfig"){
+            closeButton.alpha = 0
+        }else{
+            closeButton.alpha = 1
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,6 +49,8 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
     }
     
     @IBAction func finishButton(sender: AnyObject) {
+        var userDef = NSUserDefaults.standardUserDefaults()
+        userDef.setBool(false, forKey: "firstconfig")
         println(self.textview.text)
         ud.setObject(self.textview.text, forKey: "station")
         ud.synchronize()
