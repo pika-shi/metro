@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.64313725489999995" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPs-dV-qDO" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPs-dV-qDO" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="60" width="320" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -36,7 +37,7 @@
                                 <color key="textColor" red="0.86274509803921573" green="0.74901960784313726" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xrx-fH-5kf">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xrx-fH-5kf">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="8xL-vg-oua">
@@ -78,6 +79,14 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="8jw-dG-uRw"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" constant="50" id="P07-DX-PtL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="Rjo-xc-fRW"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="XbU-7t-yr1"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="hJK-Yu-lCq"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="rQO-Ae-55I"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -184,22 +193,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
                                 <rect key="frame" x="141" y="465" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.92941176470588238" green="0.51764705882352935" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M47-TY-dim">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M47-TY-dim">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="469"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wib-wG-pw2">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wib-wG-pw2">
                                 <rect key="frame" x="16" y="505" width="288" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="YWf-7G-Kkf"/>
+                                    <constraint firstAttribute="height" constant="55" id="ewc-Ff-w7J"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="setteihe_03.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fci-LC-728" firstAttribute="top" secondItem="Wib-wG-pw2" secondAttribute="bottom" constant="8" id="7Jw-G1-XeM"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="M47-TY-dim" secondAttribute="bottom" constant="36" id="HMj-wm-9Ou"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="JCf-F7-nWh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aPk-pt-LcL" secondAttribute="trailing" constant="124" id="M8K-KD-geM"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="WJr-xG-Lcf"/>
+                            <constraint firstItem="aPk-pt-LcL" firstAttribute="leading" secondItem="Jfw-1l-pE2" secondAttribute="leadingMargin" constant="125" id="dWu-Hr-KOb"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="3" id="gIs-tf-cF0"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="gnf-hu-Qjg"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
