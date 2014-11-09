@@ -29,7 +29,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var returnArray:Array<String>!
     var isTrack:Bool = true
     var trackAllow:Bool = false
-    var timer:NSTimer!
+    var timer:NSTimer?
 
     @IBOutlet weak var currentLocationImage: UIImageView!
     override func viewDidAppear(animated: Bool) {
