@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
+		7289E2EC1A0F748100E025AA /* carousel1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EA1A0F748100E025AA /* carousel1.png */; };
+		7289E2ED1A0F748100E025AA /* carousel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EB1A0F748100E025AA /* carousel2.png */; };
 		72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168A1A05FA1F00297F7B /* stationgeo.json */; };
 		72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168B1A05FA1F00297F7B /* stationgeohash.json */; };
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
@@ -51,6 +53,8 @@
 		42A223C1891E87B0AB218974 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7289E2EA1A0F748100E025AA /* carousel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carousel1.png; sourceTree = "<group>"; };
+		7289E2EB1A0F748100E025AA /* carousel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carousel2.png; sourceTree = "<group>"; };
 		72F1168A1A05FA1F00297F7B /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeo.json; sourceTree = "<group>"; };
 		72F1168B1A05FA1F00297F7B /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeohash.json; sourceTree = "<group>"; };
 		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		C2AB7DE91A06037200CE7540 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				7289E2EA1A0F748100E025AA /* carousel1.png */,
+				7289E2EB1A0F748100E025AA /* carousel2.png */,
 				C2B2DE8C1A0F415100F8F825 /* home_07.png */,
 				C2AB7DEA1A06037200CE7540 /* aboutyou_kanryou_03.png */,
 				C2AB7DEB1A06037200CE7540 /* aboutyou_tojiru_03.png */,
@@ -316,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7289E2ED1A0F748100E025AA /* carousel2.png in Resources */,
 				72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */,
 				C2AB7DF21A06037200CE7540 /* home_06.png in Resources */,
 				C2AB7DF11A06037200CE7540 /* home_03.png in Resources */,
@@ -325,6 +332,7 @@
 				C2B2DE8D1A0F415100F8F825 /* home_07.png in Resources */,
 				C2F03F5619E2D4870056A63E /* LaunchScreen.xib in Resources */,
 				C2AB7DEF1A06037200CE7540 /* aboutyou_kanryou_03.png in Resources */,
+				7289E2EC1A0F748100E025AA /* carousel1.png in Resources */,
 				C2AB7DF01A06037200CE7540 /* aboutyou_tojiru_03.png in Resources */,
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,
 				C2B2DE8F1A0F587800F8F825 /* stnamehash.json in Resources */,

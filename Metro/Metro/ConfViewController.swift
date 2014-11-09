@@ -16,12 +16,19 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var textview: UITextField!
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    let ud = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textview.returnKeyType = UIReturnKeyType.Done
         self.textview.delegate = self
+    }
     
+    override func viewWillAppear(animated: Bool) {
+        if let station = ud.stringForKey("station") {
+            self.textview.text = station
+            println(self.textview.text)
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -29,15 +36,19 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         return true
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func endConfig(sender: AnyObject) {
+    
+    @IBAction func finishButton(sender: AnyObject) {
+        println(self.textview.text)
+        ud.setObject(self.textview.text, forKey: "station")
+        ud.synchronize()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 

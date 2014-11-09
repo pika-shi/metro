@@ -30,7 +30,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-97-VZb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="27分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-97-VZb">
                                 <rect key="frame" x="167" y="14" width="80" height="50"/>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="23"/>
                                 <color key="textColor" red="0.86274509803921573" green="0.74901960784313726" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,7 +140,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="endConfig:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="rCM-pK-FRs"/>
+                                            <action selector="finishButton:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="PnL-E6-Sbm"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aboutyou_tojiru_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="A8H-N1-EeA">
@@ -152,7 +152,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="endConfig:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="Hpv-3T-2W6"/>
+                                            <action selector="closeButton:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="o2p-Xh-bDV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -184,7 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
                                 <rect key="frame" x="141" y="465" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.92941176470588238" green="0.51764705882352935" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
