@@ -39,7 +39,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
         if !userDef.boolForKey("tutorial") {
-            NSLog("OK")
             let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
             moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
             
@@ -179,9 +178,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
         NSLog("camera changed,isTrack=\(isTrack),trackAllow=\(trackAllow)")
-
-
-    }
+		isTrack = true
+		currentLocationImage.image = UIImage(named: "home_06")
+	}
 
     func lastTrainFetching(){
         var userDef = NSUserDefaults.standardUserDefaults()
@@ -226,10 +225,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
+<<<<<<< HEAD
             lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
             if departureRestTime <= 30 {
                 if userDef.integerForKey("lastNotifyDate2") != components.day{
+=======
+            if departureRestTime <= 30 && userDef.integerForKey("lastNotifyDate") != components.day{
+>>>>>>> 21c0208df1a526d1c4d408b31c6c65c52f12d2de
                
                     var local_notify = UILocalNotification()
                     local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)

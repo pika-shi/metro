@@ -11,7 +11,7 @@ import UIKit
 
 class TutorialViewController: UIViewController,UIScrollViewDelegate{
     
-    let page_padding:CGFloat = 30
+    let page_padding:CGFloat = 42
     var scroll_begin_point:CGPoint!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -21,7 +21,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         super.viewDidLoad()
         
         
-        var pages = 3
+        var pages = 2
         var width = self.view.frame.width
         var height = scrollView.frame.height
         self.view.backgroundColor = UIColorFromRGB(0x0ea4a0)
@@ -38,9 +38,8 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         scrollView.delegate = self
         
         
-        carouselViewSet(0, mes: "説明1")
-        carouselViewSet(1, mes: "説明2")
-        carouselViewSet(2, mes: "説明3")
+        carouselViewSet(0, mes: "はじめに、設定画面で自宅からの最寄り駅を設定して下さい。", image: "carousel2.png")
+        carouselViewSet(1, mes: "あとはポケットにしまっておくだけ。終電の時間が近づいてくるとプッシュ通知をおこないます。", image: "carousel1.png")
 
         
         finishBtn.backgroundColor = UIColorFromRGB(0x0ea4a0)
@@ -67,33 +66,29 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         return btn
     }
     
-    func carouselViewSet(page:CGFloat,mes:String ){
+    func carouselViewSet(page:CGFloat,mes:String, image:String){
         var labelposx:CGFloat = (320-0*page_padding)*page;
         let backx = labelposx
         let backwidth = self.view.frame.width
         var backView:UIView = UIView(frame: CGRectMake(backx, 0, backwidth, scrollView.frame.height))
-//        if(page==2){
-//            backView.backgroundColor = UIColorFromRGB(0xff0000)
-//        }else if(page==1){
-//            backView.backgroundColor = UIColorFromRGB(0x00ff00)
-//        }else{
-//            backView.backgroundColor = UIColorFromRGB(0x0000ff)
-//        }
         backView.backgroundColor = UIColorFromRGB(0x0ea4a0)
         let centerx = labelposx+page_padding
         let centerwidth:CGFloat = 320-page_padding*2
-        var centerView:UIView = UIView(frame: CGRectMake(centerx, scrollView.frame.height/7, centerwidth, scrollView.frame.height*6/7))
-        centerView.backgroundColor = UIColorFromRGB(0xEEE4E0)
-        var label:UILabel = UILabel(frame: CGRectMake(centerx,scrollView.frame.height/7, centerwidth, 100))
-        label.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 1, alpha: 0.8)
+        var centerImage = UIImage(named: image)
+        var centerView:UIImageView = UIImageView(frame: CGRectMake(centerx, 50, centerwidth, 469))
+        centerView.image = centerImage
+        var labelView:UIView = UIView(frame: CGRectMake(centerx, 50, centerwidth, 100))
+        labelView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
+        var label:UILabel = UILabel(frame: CGRectMake(centerx+10,55, centerwidth-20, 100))
         label.text = mes
+        label.numberOfLines = 0
         scrollView.addSubview(backView)
         scrollView.addSubview(centerView)
+        scrollView.addSubview(labelView)
         scrollView.addSubview(label)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        NSLog("scrolled!");
                 var pageWidth : CGFloat = self.scrollView.frame.size.width
         var fractionalPage : Double = Double(self.scrollView.contentOffset.x / pageWidth)
         var page : NSInteger = lround(fractionalPage)
