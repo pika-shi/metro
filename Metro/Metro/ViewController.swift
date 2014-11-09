@@ -24,7 +24,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var routeLat:Double!
     var routeLon:Double!
     var startPosition:CGPoint!
-    var restTime:Int!
+    var lastTrainRestTime:Int!
+    var departureRestTime:Int!
     var returnArray:Array<String>!
     
 
@@ -74,7 +75,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         NSLog("configButtonPushed")
         let moveConfig :ConfViewController = self.storyboard?.instantiateViewControllerWithIdentifier("config") as ConfViewController
         moveConfig.modalPresentationStyle=UIModalPresentationStyle.OverFullScreen
-        moveConfig.modalTransitionStyle=UIModalTransitionStyle.CoverVertical
+        moveConfig.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
         self.presentViewController(moveConfig, animated: true, completion: nil)
     }
     
@@ -138,8 +139,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
                     self.returnArray = response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",")
-                    self.restTime = self.returnArray[0].toInt()!
-                    for coordinate in Array(self.returnArray[1...self.returnArray.count-1]) {
+                    self.lastTrainRestTime = self.returnArray[0].toInt()!
+                    self.departureRestTime = self.returnArray[1].toInt()!
+                    for coordinate in Array(self.returnArray[2...self.returnArray.count-1]) {
                         self.routeLat = NSString(string:coordinate.componentsSeparatedByString(":")[0]).doubleValue
                         self.routeLon = NSString(string:coordinate.componentsSeparatedByString(":")[1]).doubleValue
                         path.addCoordinate(CLLocationCoordinate2DMake(self.routeLat, self.routeLon))
@@ -154,7 +156,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             }
         )
     }
-    
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
