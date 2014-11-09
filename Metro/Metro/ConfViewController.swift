@@ -48,17 +48,31 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func stationNameValidate()->Bool{
-        var filePath = NSBundle.mainBundle().pathForResource("Jsons", ofType:"txt")
+    func stationNameValidate(stationName:String)->Bool{
+        var filePath = NSBundle.mainBundle().pathForResource("stnamehash", ofType:"json")
+        print(filePath)
         var data = NSData(contentsOfFile: filePath!)
+
+        var json = JSON.parse(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
+
+        print("length=\(json.length)")
+        for key in json.generate() {
+            if stationName == (key.0 as String){
+                return true
+            }
+            let firstobj = key.1.asDictionary
+            var romatmp = firstobj!.values.first!.asString
+            let romaName:String = split(romatmp!,{ $0 == "."})[3]
+            if stationName.lowercaseString == romaName.lowercaseString{
+                return true
+            }
+        }
         
-        var json = JSON(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
-        println(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
-        return true
+        return false
     }
     
     @IBAction func finishButton(sender: AnyObject) {
-        if stationNameValidate() {
+        if stationNameValidate(textview.text) {
             var userDef = NSUserDefaults.standardUserDefaults()
             userDef.setBool(false, forKey: "firstconfig")
             println(self.textview.text)
