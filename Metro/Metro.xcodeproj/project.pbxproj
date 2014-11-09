@@ -10,6 +10,8 @@
 		5E4B173E214B2B34819DC8FB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82EED5F6F27CE1894ADD2B /* libPods.a */; };
 		7289E2EC1A0F748100E025AA /* carousel1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EA1A0F748100E025AA /* carousel1.png */; };
 		7289E2ED1A0F748100E025AA /* carousel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EB1A0F748100E025AA /* carousel2.png */; };
+		7289E2F01A0FC42300E025AA /* spl640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EE1A0FC42300E025AA /* spl640_960.png */; };
+		7289E2F11A0FC42300E025AA /* spl640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EF1A0FC42300E025AA /* spl640_1136.png */; };
 		72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168A1A05FA1F00297F7B /* stationgeo.json */; };
 		72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168B1A05FA1F00297F7B /* stationgeohash.json */; };
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
@@ -55,6 +57,8 @@
 		5D82EED5F6F27CE1894ADD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7289E2EA1A0F748100E025AA /* carousel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carousel1.png; sourceTree = "<group>"; };
 		7289E2EB1A0F748100E025AA /* carousel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carousel2.png; sourceTree = "<group>"; };
+		7289E2EE1A0FC42300E025AA /* spl640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spl640_960.png; sourceTree = "<group>"; };
+		7289E2EF1A0FC42300E025AA /* spl640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spl640_1136.png; sourceTree = "<group>"; };
 		72F1168A1A05FA1F00297F7B /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeo.json; sourceTree = "<group>"; };
 		72F1168B1A05FA1F00297F7B /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeohash.json; sourceTree = "<group>"; };
 		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
@@ -79,7 +83,7 @@
 		C2B31A4D19FE8FB700B29A01 /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgeohash.h; sourceTree = "<group>"; };
 		C2B31A4E19FE8FB700B29A01 /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgeohash.m; sourceTree = "<group>"; };
 		C2B3F86C19F9557000C20598 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		C2F03F4619E2D4870056A63E /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F03F4619E2D4870056A63E /* Last Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Train.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F03F4B19E2D4870056A63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2F03F4D19E2D4870056A63E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		C2AB7DE91A06037200CE7540 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				7289E2EE1A0FC42300E025AA /* spl640_960.png */,
+				7289E2EF1A0FC42300E025AA /* spl640_1136.png */,
 				7289E2EA1A0F748100E025AA /* carousel1.png */,
 				7289E2EB1A0F748100E025AA /* carousel2.png */,
 				C2B2DE8C1A0F415100F8F825 /* home_07.png */,
@@ -173,7 +179,7 @@
 		C2F03F4719E2D4870056A63E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2F03F4619E2D4870056A63E /* Metro.app */,
+				C2F03F4619E2D4870056A63E /* Last Train.app */,
 				C2F03F5B19E2D4870056A63E /* MetroTests.xctest */,
 			);
 			name = Products;
@@ -254,7 +260,7 @@
 			);
 			name = Metro;
 			productName = Metro;
-			productReference = C2F03F4619E2D4870056A63E /* Metro.app */;
+			productReference = C2F03F4619E2D4870056A63E /* Last Train.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C2F03F5A19E2D4870056A63E /* MetroTests */ = {
@@ -326,6 +332,8 @@
 				72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */,
 				C2AB7DF21A06037200CE7540 /* home_06.png in Resources */,
 				C2AB7DF11A06037200CE7540 /* home_03.png in Resources */,
+				7289E2F01A0FC42300E025AA /* spl640_960.png in Resources */,
+				7289E2F11A0FC42300E025AA /* spl640_1136.png in Resources */,
 				C2AB7DF31A06037200CE7540 /* setteihe_03.png in Resources */,
 				72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */,
 				C2F03F5119E2D4870056A63E /* Main.storyboard in Resources */,
@@ -528,7 +536,7 @@
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Last Train";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Debug;
@@ -543,7 +551,7 @@
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Last Train";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Release;
