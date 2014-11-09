@@ -11,6 +11,10 @@ import MapKit
 
 class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate{
 
+    
+
+    @IBOutlet weak var lastMiniteLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var setting_button: UIButton!
     @IBOutlet weak var info_label: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
@@ -43,7 +47,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         }
         println("didappear,istrack = \(isTrack)")
         isTrack = true
-        timer = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
+//        timer = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
     }
     
     override func viewDidLoad() {
@@ -65,6 +69,19 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         mapView.delegate = self
         stationManager = StationManager()
+        //20時より前のときはラベルは出さない
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let hour:Int = components.hour
+        if hour < 20 {
+            lastMiniteLabel.alpha = 0
+            messageLabel.alpha = 0
+        }else{
+            lastMiniteLabel.alpha = 1
+            messageLabel.alpha = 1
+            lastTrainFetching()
+        }
     }
 
 
@@ -162,14 +179,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
         NSLog("camera changed,isTrack=\(isTrack),trackAllow=\(trackAllow)")
-            if position.target.latitude == lat && position.target.longitude == lon {
-                isTrack = true
-                currentLocationImage.image = UIImage(named: "home_06")
-            }else{
-                currentLocationImage.image = UIImage(named: "home_07")
-                isTrack = false
-            }
-        
+
 
     }
 
@@ -179,8 +189,10 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
-        
+        lat = 35.6508225
+        lon = 139.7013585
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
+        
         var path:GMSMutablePath = GMSMutablePath()
         let manager:AFHTTPSessionManager = AFHTTPSessionManager()
         let requestSerializer:AFJSONRequestSerializer = AFJSONRequestSerializer()
@@ -209,25 +221,32 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             }
         )
         
+        departureRestTime = 20
+        lastTrainRestTime = 45
+        
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
-            
+            lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
-            if departureRestTime <= 30 && userDef.integerForKey("lastNotifyDate") != components.day{
+            if departureRestTime <= 30 {
+                if userDef.integerForKey("lastNotifyDate2") != components.day{
                
-                var local_notify = UILocalNotification()
-                local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)
-                local_notify.timeZone = NSTimeZone.defaultTimeZone()
-                local_notify.alertBody = "あと３０分後にここを出発してください"
-                local_notify.alertAction = "OK"
-                local_notify.soundName = UILocalNotificationDefaultSoundName
-                UIApplication.sharedApplication().presentLocalNotificationNow(local_notify)
+                    var local_notify = UILocalNotification()
+                    local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)
+                    local_notify.timeZone = NSTimeZone.defaultTimeZone()
+                    local_notify.alertBody = "あと\(departureRestTime)分でここを出発しましょう！"
+                    local_notify.alertAction = "OK"
+                    local_notify.soundName = UILocalNotificationDefaultSoundName
+                    UIApplication.sharedApplication().presentLocalNotificationNow(local_notify)
                 
-                userDef.setInteger(components.day, forKey: "lastNotifyDate")
+                    userDef.setInteger(components.day, forKey: "lastNotifyDate")
+                }
                 
             }
         }
     }
     
 }
+
+
 
