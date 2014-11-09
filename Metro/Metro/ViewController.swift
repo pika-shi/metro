@@ -129,6 +129,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        self.mapView.clear()
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
@@ -149,6 +150,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
+        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)")
         manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
@@ -167,19 +169,18 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 }
             },
             failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
-                println("Error!!")
+                println("Error!!!")
             }
         )
     }
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
-
-        NSLog("camera changed,isTrack=\(isTrack),trackAllow=\(trackAllow)")
 		isTrack = true
 		currentLocationImage.image = UIImage(named: "home_06")
 	}
 
     func lastTrainFetching(){
+        self.mapView.clear()
         var userDef = NSUserDefaults.standardUserDefaults()
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
