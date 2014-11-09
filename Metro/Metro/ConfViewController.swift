@@ -48,13 +48,26 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    func stationNameValidate()->Bool{
+        var filePath = NSBundle.mainBundle().pathForResource("Jsons", ofType:"txt")
+        var data = NSData(contentsOfFile: filePath!)
+        
+        var json = JSON(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
+        println(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
+        return true
+    }
+    
     @IBAction func finishButton(sender: AnyObject) {
-        var userDef = NSUserDefaults.standardUserDefaults()
-        userDef.setBool(false, forKey: "firstconfig")
-        println(self.textview.text)
-        ud.setObject(self.textview.text, forKey: "station")
-        ud.synchronize()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        if stationNameValidate() {
+            var userDef = NSUserDefaults.standardUserDefaults()
+            userDef.setBool(false, forKey: "firstconfig")
+            println(self.textview.text)
+            ud.setObject(self.textview.text, forKey: "station")
+            ud.synchronize()
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }else{
+            
+        }
     }
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)

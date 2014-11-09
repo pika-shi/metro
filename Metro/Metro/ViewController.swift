@@ -82,7 +82,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         }else{
             lastMiniteLabel.alpha = 1
             messageLabel.alpha = 1
-            lastTrainFetching()
         }
     }
 
@@ -187,8 +186,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
 
-        lat = 35.6508225
-        lon = 139.7013585
+//        lat = 35.6508225
+//        lon = 139.7013585
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         
         var path:GMSMutablePath = GMSMutablePath()
@@ -220,8 +219,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         )
         
 
-        lastTrainRestTime = 45
-        departureRestTime = 21
+//        lastTrainRestTime = 45
+//        departureRestTime = 21
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
