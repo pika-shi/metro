@@ -57,7 +57,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         stationManager = StationManager()
     }
 
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

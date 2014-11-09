@@ -133,6 +133,10 @@
                                         <rect key="frame" x="0.0" y="211" width="320" height="38"/>
                                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-mQ-vCP">
+                                        <rect key="frame" x="0.0" y="93" width="320" height="38"/>
+                                        <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに入力してください" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-9i-gzE">
                                         <rect key="frame" x="15" y="93" width="315" height="38"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
@@ -168,10 +172,6 @@
                                             <action selector="endConfig:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="Hpv-3T-2W6"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-mQ-vCP">
-                                        <rect key="frame" x="0.0" y="93" width="320" height="38"/>
-                                        <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.64313725489999995" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
