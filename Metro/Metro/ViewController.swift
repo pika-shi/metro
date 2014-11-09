@@ -107,8 +107,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         mapView.camera = camera
         var marker:GMSMarker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(lat, lon)
-        marker.title = "現在地"
-        marker.snippet = "ここだよ〜"
         marker.map = mapView
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         var path:GMSMutablePath = GMSMutablePath()
@@ -120,15 +118,18 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         manager.requestSerializer = requestSerializer
         manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
-                for coordinate in response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",") {
-                    self.routeLat = NSString(string:coordinate.componentsSeparatedByString(":")[0]).doubleValue
-                    self.routeLon = NSString(string:coordinate.componentsSeparatedByString(":")[1]).doubleValue
-                    path.addCoordinate(CLLocationCoordinate2DMake(self.routeLat, self.routeLon))
+                if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
+                    path.removeAllCoordinates()
+                    for coordinate in response.description.componentsSeparatedByString("\"")[1].componentsSeparatedByString(",") {
+                        self.routeLat = NSString(string:coordinate.componentsSeparatedByString(":")[0]).doubleValue
+                        self.routeLon = NSString(string:coordinate.componentsSeparatedByString(":")[1]).doubleValue
+                        path.addCoordinate(CLLocationCoordinate2DMake(self.routeLat, self.routeLon))
+                    }
+                    var rectangle:GMSPolyline = GMSPolyline(path: path)
+                    rectangle.strokeWidth = 4;
+                    rectangle.map = self.mapView
                 }
-                var rectangle:GMSPolyline = GMSPolyline(path: path)
-                rectangle.strokeWidth = 4;
-                rectangle.map = self.mapView
-        },
+            },
             failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
                 println("Error!!")
             }
