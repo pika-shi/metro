@@ -104,8 +104,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.95000001192092909" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-C8-ZKv">
-                                <rect key="frame" x="0.0" y="337" width="320" height="231"/>
+                            <view alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIJ-9U-Q9e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-C8-ZKv">
+                                <rect key="frame" x="10" y="168" width="300" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwb-A7-N4C">
                                         <rect key="frame" x="140" y="8" width="41" height="26"/>
@@ -120,16 +124,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-mQ-vCP">
-                                        <rect key="frame" x="0.0" y="83" width="320" height="38"/>
+                                        <rect key="frame" x="0.0" y="83" width="300" height="38"/>
                                         <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに入力してください" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-9i-gzE">
-                                        <rect key="frame" x="15" y="83" width="315" height="38"/>
+                                        <rect key="frame" x="15" y="83" width="285" height="38"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpI-gm-co8">
-                                        <rect key="frame" x="16" y="156" width="288" height="55"/>
+                                        <rect key="frame" x="6" y="156" width="288" height="55"/>
                                         <color key="backgroundColor" red="0.054901960784313725" green="0.64313725490196072" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="aboutyou_kanryou_03.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,10 +144,10 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aboutyou_tojiru_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="A8H-N1-EeA">
-                                        <rect key="frame" x="286" y="10" width="22" height="22"/>
+                                        <rect key="frame" x="266" y="10" width="22" height="22"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-sy-aN6">
-                                        <rect key="frame" x="270" y="0.0" width="50" height="42"/>
+                                        <rect key="frame" x="250" y="0.0" width="50" height="42"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
