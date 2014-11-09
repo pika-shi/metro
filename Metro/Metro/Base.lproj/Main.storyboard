@@ -166,6 +166,12 @@
                                             <action selector="closeButton:" destination="WIC-9z-Ra4" eventType="touchUpInside" id="o2p-Xh-bDV"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-hO-BcH">
+                                        <rect key="frame" x="83" y="56" width="200" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.64313725489999995" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -175,6 +181,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="closeButton" destination="oRW-sy-aN6" id="vT8-4T-Y12"/>
+                        <outlet property="closeImage" destination="A8H-N1-EeA" id="yk9-QG-jxs"/>
+                        <outlet property="errorLabel" destination="Ppf-hO-BcH" id="ddY-9U-sd6"/>
                         <outlet property="finishButton" destination="mpI-gm-co8" id="HCP-aR-Ibh"/>
                         <outlet property="textview" destination="bgH-9i-gzE" id="64K-P4-yZl"/>
                     </connections>

@@ -31,6 +31,7 @@ DEPENDENCIES:
   - Google-Maps-iOS-SDK (~> 1.8.1)
   - SMCalloutView (~> 2.0)
   - SVProgressHUD
+  - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab

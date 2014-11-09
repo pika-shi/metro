@@ -6,3 +6,4 @@ pod 'SMCalloutView', '~> 2.0'
 pod 'SVProgressHUD'
 pod 'AFNetworking'
 pod 'BButton'
+pod 'SVProgressHUD' ,:head
