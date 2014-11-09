@@ -24,6 +24,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var routeLat:Double!
     var routeLon:Double!
     
+
+    @IBOutlet weak var currentLocationImage: UIImageView!
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
         if !userDef.boolForKey("tutorial") {
@@ -85,6 +87,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     @IBAction func locationHead(sender: AnyObject) {
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if userDef.boolForKey("track") {
+            userDef.setBool(false, forKey: "track")
+            currentLocationImage.image = UIImage(named: "home_07")
+        }else{
+            userDef.setBool(true, forKey: "track")
+            currentLocationImage.image = UIImage(named: "home_06")
+        }
     }
     
     

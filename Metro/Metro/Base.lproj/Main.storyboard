@@ -90,6 +90,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="currentLocationImage" destination="fyT-ey-sEc" id="qJT-gK-kF7"/>
                         <outlet property="info_label" destination="0Lg-OI-7iX" id="IhJ-VB-KU4"/>
                         <outlet property="mapView" destination="KPs-dV-qDO" id="5R3-Cg-UPS"/>
                         <outlet property="setting_button" destination="JDQ-36-wzj" id="P3y-K6-dPh"/>
