@@ -46,9 +46,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
+     
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("tutorial") {
             NSLog("NG")
@@ -62,8 +60,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         mapView.delegate = self
         stationManager = StationManager()
-        userDef.setBool(true, forKey: "track")
-        
     }
 
 
