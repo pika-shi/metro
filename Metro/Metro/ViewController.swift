@@ -161,16 +161,9 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
 
         NSLog("camera changed,isTrack=\(isTrack),trackAllow=\(trackAllow)")
-            if position.target.latitude == lat! && position.target.longitude == lon! {
-                isTrack = true
-                currentLocationImage.image = UIImage(named: "home_06")
-            }else{
-                currentLocationImage.image = UIImage(named: "home_07")
-                isTrack = false
-            }
-        
-
-    }
+            isTrack = true
+            currentLocationImage.image = UIImage(named: "home_06")
+        }
 
     func lastTrainFetching(){
         var userDef = NSUserDefaults.standardUserDefaults()
@@ -210,8 +203,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {
-            
-
             if departureRestTime <= 30 && userDef.integerForKey("lastNotifyDate") != components.day{
                
                 var local_notify = UILocalNotification()
