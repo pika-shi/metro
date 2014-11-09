@@ -23,7 +23,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var lon:Double!
     var routeLat:Double!
     var routeLon:Double!
-    
+    var startPosition:CGPoint!
 
     @IBOutlet weak var currentLocationImage: UIImageView!
     override func viewDidAppear(animated: Bool) {
@@ -90,21 +90,32 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         var userDef = NSUserDefaults.standardUserDefaults()
         if userDef.boolForKey("track") {
             userDef.setBool(false, forKey: "track")
-            currentLocationImage.image = UIImage(named: "home_07")
+            currentLocationImage.image = UIImage(named: "home_06")
+            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+            mapView.animateToCameraPosition(camera)
         }else{
             userDef.setBool(true, forKey: "track")
-            currentLocationImage.image = UIImage(named: "home_06")
+            currentLocationImage.image = UIImage(named: "home_07")
+        }
+    }
+    func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if userDef.boolForKey("track"){
+            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+            mapView.animateToCameraPosition(camera)
         }
     }
     
-    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        var userDef = NSUserDefaults.standardUserDefaults()
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
         println("\(lat) \(lon)")
-        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
-        mapView.camera = camera
+        if userDef.boolForKey("track"){
+            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+            mapView.camera = camera
+        }
         var marker:GMSMarker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(lat, lon)
         marker.map = mapView
@@ -135,5 +146,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             }
         )
     }
+    
+    
+    func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
+        NSLog("camera changed")
+        var userDef = NSUserDefaults.standardUserDefaults()
+        userDef.setBool(false, forKey: "track")
+        currentLocationImage.image = UIImage(named: "home_07")
+    }
+
 }
 
