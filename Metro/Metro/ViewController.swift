@@ -59,6 +59,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         l_manager.requestAlwaysAuthorization()
         l_manager.distanceFilter = 300
         
+        mapView.delegate = self
         stationManager = StationManager()
     }
 
