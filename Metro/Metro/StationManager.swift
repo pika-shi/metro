@@ -56,8 +56,8 @@ public class StationManager{
             
             for gh in searchGeohash.keys {
                 if let stations:[JSON] = gh_json[gh].asArray {
-                    println("contain station in "+gh)
-                    println(gh_json[gh].toString())
+//                    println("contain station in "+gh)
+//                    println(gh_json[gh].toString())
                     for station in stations {
                         nearStations.append(station)
                     }
@@ -68,7 +68,7 @@ public class StationManager{
                 }
             }
         }
-        println(nearStations)
+//        println(nearStations)
         var stationLat:Double = 0
         var stationLon:Double = 0
         var tmpStationLat:Double

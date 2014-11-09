@@ -112,13 +112,7 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     }
     
     func endTutorial(){
-        var local_notify = UILocalNotification()
-        local_notify.fireDate = NSDate(timeIntervalSinceNow: 30)
-        local_notify.timeZone = NSTimeZone.defaultTimeZone()
-        local_notify.alertBody = "終電５分前です"
-        local_notify.alertAction = "OK"
-        local_notify.soundName = UILocalNotificationDefaultSoundName
-        UIApplication.sharedApplication().presentLocalNotificationNow(local_notify)
+        
         
         var userDef = NSUserDefaults.standardUserDefaults()
         userDef.setBool(true,forKey:"tutorial")
