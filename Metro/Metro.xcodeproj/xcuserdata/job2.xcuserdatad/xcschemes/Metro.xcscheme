@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3B8659DCD49F6D1A2EA677E"
+               BlueprintIdentifier = "718801CF082E70D849B2F939"
                BuildableName = "libPods.a"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C2F03F4519E2D4870056A63E"
-               BuildableName = "Last Train.app"
+               BuildableName = "LAST TRAIN.app"
                BlueprintName = "Metro"
                ReferencedContainer = "container:Metro.xcodeproj">
             </BuildableReference>
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F04983AD98C7BAB71210C55"
+               BlueprintIdentifier = "21288AC875CC8A1C487A6524"
                BuildableName = "libPods-AFNetworking.a"
                BlueprintName = "Pods-AFNetworking"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A5D9E4D9A47DA310757AD24"
+               BlueprintIdentifier = "A83AFED20B67E0EAE0224DA1"
                BuildableName = "libPods-Google-Maps-iOS-SDK.a"
                BlueprintName = "Pods-Google-Maps-iOS-SDK"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -84,7 +84,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C4AD1E9807551A20F0AF76D"
+               BlueprintIdentifier = "1A3D66CC20712A59ED2E0F6C"
                BuildableName = "libPods-SMCalloutView.a"
                BlueprintName = "Pods-SMCalloutView"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -98,7 +98,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A053590BD4BD68A0DBC7F719"
+               BlueprintIdentifier = "BC696F8F85C96AC61D9C54A9"
                BuildableName = "libPods-SVProgressHUD.a"
                BlueprintName = "Pods-SVProgressHUD"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -127,7 +127,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F03F4519E2D4870056A63E"
-            BuildableName = "Last Train.app"
+            BuildableName = "LAST TRAIN.app"
             BlueprintName = "Metro"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
@@ -146,7 +146,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F03F4519E2D4870056A63E"
-            BuildableName = "Last Train.app"
+            BuildableName = "LAST TRAIN.app"
             BlueprintName = "Metro"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
@@ -164,7 +164,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F03F4519E2D4870056A63E"
-            BuildableName = "Last Train.app"
+            BuildableName = "LAST TRAIN.app"
             BlueprintName = "Metro"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>

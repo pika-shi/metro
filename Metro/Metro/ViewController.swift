@@ -75,8 +75,13 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             lastMiniteLabel.alpha = 0
             messageLabel.alpha = 0
         }else{
-            lastMiniteLabel.alpha = 1
-            messageLabel.alpha = 1
+            if lastTrainRestTime != nil{
+                lastMiniteLabel.alpha = 1
+                messageLabel.alpha = 1
+            }else{
+                lastMiniteLabel.alpha = 0
+                messageLabel.alpha = 0
+            }
         }
     }
 
@@ -177,8 +182,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
 
-        lat = 35.6508225
-        lon = 139.7013585
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         
         var path:GMSMutablePath = GMSMutablePath()
