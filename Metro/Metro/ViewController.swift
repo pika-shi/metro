@@ -163,19 +163,22 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                     rectangle.strokeWidth = 4;
                     rectangle.map = self.mapView
                 }
+                let date = NSDate()
+                let calendar = NSCalendar.currentCalendar()
+                let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+                let hour:Int = components.hour
+                if hour >= 20 {
+                    println("called-------------------------------------------------------------------------------------------------------------------------")
+                    self.lastMiniteLabel.alpha = 1
+                    self.messageLabel.alpha = 1
+                    self.lastMiniteLabel.text = "\(self.lastTrainRestTime)分"
+                }
             },
             failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
                 println("Error!!!")
             }
         )
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
-        let hour:Int = components.hour
-        if hour >= 20 {
-            println("called")
-            lastMiniteLabel.text = "\(lastTrainRestTime)分"
-        }
+        
     }
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
