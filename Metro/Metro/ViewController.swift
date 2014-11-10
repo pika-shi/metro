@@ -206,6 +206,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                     rectangle.strokeWidth = 4;
                     rectangle.map = self.mapView
                 }
+                self.lastMiniteLabel.alpha = 1
+                self.messageLabel.alpha = 1
             },
             failure: {(operation: NSURLSessionDataTask!, error: NSError!) in
                 println("Error!!")
