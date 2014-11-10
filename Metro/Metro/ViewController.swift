@@ -47,9 +47,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if userDef.boolForKey("firstconfig"){
             settings(setting_button)
         }
-        println("didappear,istrack = \(isTrack)")
         isTrack = true
-        timer = NSTimer.scheduledTimerWithTimeInterval(300, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(900, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
     }
     
     override func viewDidLoad() {
@@ -59,10 +58,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         // Do any additional setup after loading the view, typically from a nib.
      
         var userDef = NSUserDefaults.standardUserDefaults()
-        if userDef.boolForKey("tutorial") {
-            NSLog("NG")
-        }
-        
         l_manager = CLLocationManager()
         l_manager.delegate = self
         l_manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -91,7 +86,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         // Dispose of any resources that can be recreated.
     }
     @IBAction func settings(sender: UIButton) {
-        NSLog("configButtonPushed")
         let moveConfig :ConfViewController = self.storyboard?.instantiateViewControllerWithIdentifier("config") as ConfViewController
         moveConfig.modalPresentationStyle=UIModalPresentationStyle.OverFullScreen
         moveConfig.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
@@ -105,7 +99,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     @IBAction func moveToTutorial(sender: AnyObject) {
-        NSLog("button pushed")
         let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
         moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
         
@@ -117,8 +110,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
 
         var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
         mapView.animateToCameraPosition(camera)
-
-        print("head,isTrack=\(isTrack),trackAllow=\(trackAllow)")
     }
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
         var userDef = NSUserDefaults.standardUserDefaults()
@@ -150,7 +141,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)")
         manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
@@ -218,10 +208,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 println("Error!!")
             }
         )
-        
-
-        lastTrainRestTime = 45
-        departureRestTime = 21
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
         if hour >= 20 {

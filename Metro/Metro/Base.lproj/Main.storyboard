@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -64,16 +64,6 @@
                                             <action selector="settings:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pmw-bR-Eef"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-3J-4ry">
-                                        <rect key="frame" x="135" y="10" width="50" height="30"/>
-                                        <state key="normal" title="Tutorial">
-                                            <color key="titleColor" red="0.054901960784313725" green="0.64313725490196072" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="moveToTutorial:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wpB-vc-Djo"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -106,7 +96,7 @@
         <!--Conf View Controller-->
         <scene sceneID="Jhg-8B-dDh">
             <objects>
-                <viewController storyboardIdentifier="config" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIC-9z-Ra4" customClass="ConfViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="config" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIC-9z-Ra4" customClass="ConfViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGh-bj-L9V"/>
                         <viewControllerLayoutGuide type="bottom" id="HZa-t4-jIU"/>
@@ -194,7 +184,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="yLV-4P-Ox4">
             <objects>
-                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2em-ed-gBl" customClass="TutorialViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2em-ed-gBl" customClass="TutorialViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aig-mb-cUA"/>
                         <viewControllerLayoutGuide type="bottom" id="Fci-LC-728"/>

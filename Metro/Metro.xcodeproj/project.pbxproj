@@ -83,7 +83,7 @@
 		C2B31A4D19FE8FB700B29A01 /* cgeohash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgeohash.h; sourceTree = "<group>"; };
 		C2B31A4E19FE8FB700B29A01 /* cgeohash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgeohash.m; sourceTree = "<group>"; };
 		C2B3F86C19F9557000C20598 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		C2F03F4619E2D4870056A63E /* Last Train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Train.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F03F4619E2D4870056A63E /* LAST TRAIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LAST TRAIN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F03F4A19E2D4870056A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F03F4B19E2D4870056A63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2F03F4D19E2D4870056A63E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		C2F03F4719E2D4870056A63E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2F03F4619E2D4870056A63E /* Last Train.app */,
+				C2F03F4619E2D4870056A63E /* LAST TRAIN.app */,
 				C2F03F5B19E2D4870056A63E /* MetroTests.xctest */,
 			);
 			name = Products;
@@ -260,7 +260,7 @@
 			);
 			name = Metro;
 			productName = Metro;
-			productReference = C2F03F4619E2D4870056A63E /* Last Train.app */;
+			productReference = C2F03F4619E2D4870056A63E /* LAST TRAIN.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C2F03F5A19E2D4870056A63E /* MetroTests */ = {
@@ -536,7 +536,8 @@
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "Last Train";
+				PRODUCT_MODULE_NAME = Metro;
+				PRODUCT_NAME = "LAST TRAIN";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Debug;
@@ -551,7 +552,8 @@
 				INFOPLIST_FILE = Metro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "Last Train";
+				PRODUCT_MODULE_NAME = Metro;
+				PRODUCT_NAME = "LAST TRAIN";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 			};
 			name = Release;
