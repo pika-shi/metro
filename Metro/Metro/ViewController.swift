@@ -62,7 +62,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         l_manager.delegate = self
         l_manager.desiredAccuracy = kCLLocationAccuracyBest
         l_manager.requestAlwaysAuthorization()
-        l_manager.distanceFilter = 300
+        l_manager.distanceFilter = 500
         
         mapView.delegate = self
         stationManager = StationManager()
@@ -83,6 +83,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 messageLabel.alpha = 0
             }
         }
+
     }
 
 
@@ -167,6 +168,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 println("Error!!!")
             }
         )
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let hour:Int = components.hour
+        if hour >= 20 {
+            println("called")
+            lastMiniteLabel.text = "\(lastTrainRestTime)分"
+        }
     }
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
