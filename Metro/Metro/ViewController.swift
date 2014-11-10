@@ -130,8 +130,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
-        println("\(lat) \(lon)")
-        println("locationmanager,isTrack=\(isTrack)")
         if isTrack{
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.camera = camera
@@ -168,7 +166,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
                 let hour:Int = components.hour
                 if hour >= 20 {
-                    println("called-------------------------------------------------------------------------------------------------------------------------")
                     self.lastMiniteLabel.alpha = 1
                     self.messageLabel.alpha = 1
                     self.lastMiniteLabel.text = "\(self.lastTrainRestTime)分"

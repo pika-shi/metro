@@ -11,7 +11,7 @@ import UIKit
 
 class TutorialViewController: UIViewController,UIScrollViewDelegate{
     
-    let page_padding:CGFloat = 42
+    let page_padding:CGFloat = 30
     var scroll_begin_point:CGPoint!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -67,15 +67,17 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     }
     
     func carouselViewSet(page:CGFloat,mes:String, image:String){
-        var labelposx:CGFloat = (320-0*page_padding)*page;
+        var width:CGFloat = UIScreen.mainScreen().bounds.size.width
+        var labelposx:CGFloat = (width-0*page_padding)*page;
         let backx = labelposx
         let backwidth = self.view.frame.width
         var backView:UIView = UIView(frame: CGRectMake(backx, 0, backwidth, scrollView.frame.height))
         backView.backgroundColor = UIColorFromRGB(0x0ea4a0)
         let centerx = labelposx+page_padding
-        let centerwidth:CGFloat = 320-page_padding*2
+        var height:CGFloat = UIScreen.mainScreen().bounds.size.height-168
+        let centerwidth:CGFloat = width-page_padding*2
         var centerImage = UIImage(named: image)
-        var centerView:UIImageView = UIImageView(frame: CGRectMake(centerx, 50, centerwidth, 469))
+        var centerView:UIImageView = UIImageView(frame: CGRectMake(centerx, 50, centerwidth, height))
         centerView.image = centerImage
 //        var labelView:UIView = UIView(frame: CGRectMake(centerx, 50, centerwidth, 100))
 //        labelView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
