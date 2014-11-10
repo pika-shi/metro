@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeA-NB-fdx">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeA-NB-fdx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.64313725489999995" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -31,7 +31,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="27分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-97-VZb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-97-VZb">
                                 <rect key="frame" x="167" y="14" width="80" height="50"/>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="23"/>
                                 <color key="textColor" red="0.86274509803921573" green="0.74901960784313726" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,16 +66,32 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RtL-b0-wDa"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WeA-NB-fdx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="6CZ-dL-dTJ"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="6E7-as-lhA"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" constant="50" id="8WJ-Ij-yxC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="8jw-dG-uRw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="D2p-o6-y13"/>
+                            <constraint firstItem="KPs-dV-qDO" firstAttribute="top" secondItem="WeA-NB-fdx" secondAttribute="bottom" id="DLp-2P-qo7"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="Dpx-aq-FJG"/>
+                            <constraint firstItem="WeA-NB-fdx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="EX7-uX-xgZ"/>
                             <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" constant="50" id="P07-DX-PtL"/>
+                            <constraint firstItem="WeA-NB-fdx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="RHz-iH-TFC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="Rjo-xc-fRW"/>
                             <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="XbU-7t-yr1"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="Zdf-rX-HZ3"/>
+                            <constraint firstItem="KPs-dV-qDO" firstAttribute="top" secondItem="WeA-NB-fdx" secondAttribute="bottom" id="eFg-MN-O1O"/>
                             <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="hJK-Yu-lCq"/>
                             <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="rQO-Ae-55I"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xrx-fH-5kf" secondAttribute="bottom" id="sIG-S8-WvR"/>
+                            <constraint firstItem="WeA-NB-fdx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="sa0-oJ-i8d"/>
+                            <constraint firstItem="Xrx-fH-5kf" firstAttribute="top" secondItem="KPs-dV-qDO" secondAttribute="bottom" id="uDH-Ny-ER5"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -96,7 +112,7 @@
         <!--Conf View Controller-->
         <scene sceneID="Jhg-8B-dDh">
             <objects>
-                <viewController storyboardIdentifier="config" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIC-9z-Ra4" customClass="ConfViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="config" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIC-9z-Ra4" customClass="ConfViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGh-bj-L9V"/>
                         <viewControllerLayoutGuide type="bottom" id="HZa-t4-jIU"/>
@@ -184,7 +200,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="yLV-4P-Ox4">
             <objects>
-                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2em-ed-gBl" customClass="TutorialViewController" customModule="Last_Train" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2em-ed-gBl" customClass="TutorialViewController" customModule="Metro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aig-mb-cUA"/>
                         <viewControllerLayoutGuide type="bottom" id="Fci-LC-728"/>
@@ -193,8 +209,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-pt-LcL">
                                 <rect key="frame" x="141" y="465" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="J5s-3e-Kfg"/>
+                                    <constraint firstAttribute="width" constant="39" id="Rvo-ns-CcY"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="0.92941176470588238" green="0.51764705882352935" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -206,6 +226,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="YWf-7G-Kkf"/>
                                     <constraint firstAttribute="height" constant="55" id="ewc-Ff-w7J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="wPg-Pe-uXD"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="setteihe_03.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,13 +236,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fci-LC-728" firstAttribute="top" secondItem="Wib-wG-pw2" secondAttribute="bottom" constant="8" id="7Jw-G1-XeM"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="3" id="8I4-0m-WWA"/>
+                            <constraint firstItem="Fci-LC-728" firstAttribute="top" secondItem="Wib-wG-pw2" secondAttribute="bottom" constant="8" id="EgO-yW-xpi"/>
                             <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="M47-TY-dim" secondAttribute="bottom" constant="36" id="HMj-wm-9Ou"/>
                             <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="JCf-F7-nWh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aPk-pt-LcL" secondAttribute="trailing" constant="124" id="M8K-KD-geM"/>
                             <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="WJr-xG-Lcf"/>
                             <constraint firstItem="aPk-pt-LcL" firstAttribute="leading" secondItem="Jfw-1l-pE2" secondAttribute="leadingMargin" constant="125" id="dWu-Hr-KOb"/>
+                            <constraint firstItem="M47-TY-dim" firstAttribute="top" secondItem="Jfw-1l-pE2" secondAttribute="topMargin" id="dcJ-Rg-0B4"/>
                             <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="3" id="gIs-tf-cF0"/>
                             <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="66" id="gnf-hu-Qjg"/>
+                            <constraint firstItem="Wib-wG-pw2" firstAttribute="top" secondItem="aPk-pt-LcL" secondAttribute="bottom" constant="3" id="pSV-Ms-EhD"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
