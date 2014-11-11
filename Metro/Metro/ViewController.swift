@@ -38,12 +38,6 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBOutlet weak var currentLocationImage: UIImageView!
     override func viewDidAppear(animated: Bool) {
         var userDef = NSUserDefaults.standardUserDefaults()
-        if !userDef.boolForKey("tutorial") {
-            let moveTutorial : TutorialViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tutorial") as TutorialViewController
-            moveTutorial.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
-            self.presentViewController(moveTutorial, animated: true, completion: nil)
-            
-        }
         if userDef.boolForKey("firstconfig"){
             settings(setting_button)
         }
