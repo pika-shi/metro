@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let gApiKey:String? = "AIzaSyDkaoHn9zOcl3leGlsjrGziZ5Gr6hyHwzg"
+        let gApiKey:String? = "AIzaSyAzInywg3VEpeGfOdTDnJnGkcvRbnR3Buk"
         if gApiKey == nil {
             let bundleId = NSBundle.mainBundle().bundleIdentifier
             var format = "Configure APIKey inside GoogleMapAPIKey.h for your "
