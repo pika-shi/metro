@@ -108,8 +108,10 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBAction func locationHead(sender: AnyObject) {
         var userDef = NSUserDefaults.standardUserDefaults()
 
-        var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
-        mapView.animateToCameraPosition(camera)
+        if (lat != nil && lon != nil){
+            var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
+            mapView.animateToCameraPosition(camera)
+        }
     }
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
         var userDef = NSUserDefaults.standardUserDefaults()
