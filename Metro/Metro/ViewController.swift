@@ -20,6 +20,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBOutlet weak var mapView: GMSMapView!
     var calloutView :SMCalloutView?
     let defaultRadius = 300
+    let threshold_time = 15
+    var notify_minutes = 1
     var stationManager:StationManager!
     var location:CLLocation!
     var l_manager:CLLocationManager!
@@ -42,7 +44,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
             settings(setting_button)
         }
         isTrack = true
-        timer = NSTimer.scheduledTimerWithTimeInterval(900, target:self, selector:"lastTrainFetching", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval( Double(notify_minutes*60), target:self, selector:"lastTrainFetching" , userInfo: nil, repeats: true)
     }
     
     override func viewDidLoad() {
@@ -65,7 +67,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
-        if hour < 20 {
+        if hour < threshold_time {
             lastMiniteLabel.alpha = 0
             messageLabel.alpha = 0
         }else{
@@ -108,7 +110,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBAction func locationHead(sender: AnyObject) {
         var userDef = NSUserDefaults.standardUserDefaults()
 
-        if (lat != nil && lon != nil){
+        if (lat != nil && lon != nil ){
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.animateToCameraPosition(camera)
         }
@@ -161,7 +163,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 let calendar = NSCalendar.currentCalendar()
                 let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
                 let hour:Int = components.hour
-                if hour >= 20 {
+                if hour >= self.threshold_time {
                     self.lastMiniteLabel.alpha = 1
                     self.messageLabel.alpha = 1
                     self.lastMiniteLabel.text = "\(self.lastTrainRestTime)分"
@@ -220,7 +222,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         )
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
-        //if hour >= 20 {
+        if hour >= self.threshold_time {
             lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
             if departureRestTime <= 30 {
@@ -238,7 +240,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 }
                 
             }
-        //}
+        }
     }
     
 }
