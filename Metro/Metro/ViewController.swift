@@ -20,7 +20,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     @IBOutlet weak var mapView: GMSMapView!
     var calloutView :SMCalloutView?
     let defaultRadius = 300
-    let threshold_time = 20
+    let threshold_time = 15
     var notify_minutes = 1
     var stationManager:StationManager!
     var location:CLLocation!

@@ -13,6 +13,7 @@
 		7289E2ED1A0F748100E025AA /* carousel2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EB1A0F748100E025AA /* carousel2.png */; };
 		7289E2F01A0FC42300E025AA /* spl640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EE1A0FC42300E025AA /* spl640_960.png */; };
 		7289E2F11A0FC42300E025AA /* spl640_1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 7289E2EF1A0FC42300E025AA /* spl640_1136.png */; };
+		729BB8A21A1872F6003DA12D /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 729BB8A11A1872F6003DA12D /* back2.png */; };
 		72F1168C1A05FA1F00297F7B /* stationgeo.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168A1A05FA1F00297F7B /* stationgeo.json */; };
 		72F1168D1A05FA1F00297F7B /* stationgeohash.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F1168B1A05FA1F00297F7B /* stationgeohash.json */; };
 		C220E39A19F2D7A9009EC1F1 /* StationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */; };
@@ -63,6 +64,7 @@
 		7289E2EB1A0F748100E025AA /* carousel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carousel2.png; sourceTree = "<group>"; };
 		7289E2EE1A0FC42300E025AA /* spl640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spl640_960.png; sourceTree = "<group>"; };
 		7289E2EF1A0FC42300E025AA /* spl640_1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spl640_1136.png; sourceTree = "<group>"; };
+		729BB8A11A1872F6003DA12D /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
 		72F1168A1A05FA1F00297F7B /* stationgeo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeo.json; sourceTree = "<group>"; };
 		72F1168B1A05FA1F00297F7B /* stationgeohash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationgeohash.json; sourceTree = "<group>"; };
 		C220E39919F2D7A9009EC1F1 /* StationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManagerTests.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				723C49BC1A117E4100D04033 /* back.png */,
+				729BB8A11A1872F6003DA12D /* back2.png */,
 				C2B2DE901A10EB2E00F8F825 /* tutorial1_03.png */,
 				C2B2DE911A10EB2E00F8F825 /* tutorial2_03.png */,
 				7289E2EE1A0FC42300E025AA /* spl640_960.png */,
@@ -357,6 +360,7 @@
 				C2F03F5319E2D4870056A63E /* Images.xcassets in Resources */,
 				C2B2DE8F1A0F587800F8F825 /* stnamehash.json in Resources */,
 				C2B2DE921A10EB2E00F8F825 /* tutorial1_03.png in Resources */,
+				729BB8A21A1872F6003DA12D /* back2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,8 +548,8 @@
 			baseConfigurationReference = 5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
@@ -553,7 +557,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_MODULE_NAME = Metro;
 				PRODUCT_NAME = Metro;
-				PROVISIONING_PROFILE = "498d21c6-c7ad-4daa-bc7d-fc8ff80fe069";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -564,8 +568,8 @@
 			baseConfigurationReference = 42A223C1891E87B0AB218974 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
@@ -573,7 +577,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_MODULE_NAME = Metro;
 				PRODUCT_NAME = "LAST TRAIN";
-				PROVISIONING_PROFILE = "498d21c6-c7ad-4daa-bc7d-fc8ff80fe069";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

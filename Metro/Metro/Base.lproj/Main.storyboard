@@ -154,7 +154,7 @@
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-C8-ZKv">
                                 <rect key="frame" x="10" y="168" width="300" height="231"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-vX-ZVw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-vX-ZVw">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="231"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="231" id="HbZ-QU-jbl"/>
@@ -342,7 +342,7 @@
     <resources>
         <image name="aboutyou_kanryou_03.png" width="580" height="110"/>
         <image name="aboutyou_tojiru_03.png" width="44" height="44"/>
-        <image name="back.png" width="1772" height="1365"/>
+        <image name="back2.png" width="1461" height="1125"/>
         <image name="home_03.png" width="60" height="80"/>
         <image name="home_06.png" width="80" height="72"/>
         <image name="setteihe_03.png" width="580" height="110"/>
