@@ -220,7 +220,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         )
         
         println("hour=\(hour),day=\(components.day),departtime=\(departureRestTime)")
-        if hour >= 20 {
+        //if hour >= 20 {
             lastMiniteLabel.text = "\(lastTrainRestTime)分"
 
             if departureRestTime <= 30 {
@@ -238,7 +238,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
                 }
                 
             }
-        }
+        //}
     }
     
 }
