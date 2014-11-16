@@ -49,22 +49,29 @@
 
 
 	<div class="container gray">
-
+		<div class="row mt centered">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+        <h1>ただ、ポケットに入れておくだけ。</h1>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
 		<div class="row mt centered">
       <div class="col-lg-1"></div>
 			<div class="col-lg-5">
 				<img src="assets/img/metro_19.png" width="10%" alt="">
-				<p style="padding-top:35px;">初回起動時に、自宅の最寄り駅を登録します。</p>
+				<h2 style="padding-top:25px;color:#555;">初回起動時に、自宅の最寄り駅を登録します。</h2>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-5">
 				<img src="assets/img/metro_21.png" width="10%" alt="">
-				<p style="padding-top:20px;">あとはポケットにしまっておくだけ。終電の時間が近づくとちょうどいいタイミングでプッシュ通知をおこないます。</p>
+				<h2
+          style="padding-top:10px;padding-bottom:10px;color:#555;">あとはポケットにしまっておくだけ。終電の時間が近づくとちょうどいいタイミングでプッシュ通知をおこないます。</h2>
 			</div><!--/col-lg-4 -->
       <div class="col-lg-1"></div>
 		</div><!-- /row -->
 
-		<div class="row mt centered">
+		<div class="row centered">
       <div class="col-lg-1"></div>
 			<div class="col-lg-5">
 				<img src="assets/img/LP_03.png" width="40%" alt="">
@@ -80,17 +87,52 @@
 
 	<div class="container white">
 		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>俺たちは血液だ</h1>
-				<h3>滞り無く流れろ.......... 酸素を回せ........... ”脳”が 正常に働くために............</h3>
-			</div>
-		</div><!-- /row -->
+      <div class="col-lg-1"></div>
+      <div class="col-lg-10">
+        <h1>どんな仕組みなの？</h1>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
 
+		<div class="row mtb centered">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-3">
+        <h4>Step 1</h4>
+        <h2
+           style="color:#555;">毎晩20時以降になると、一定時間間隔であなたの現在地(GPS)を取得し、<b>東京メトロAPI</b>により現在地からの最寄り駅を取得します。</h2>
+      </div>
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-3">
+        <h4>Step 3</h4>
+        <h2
+           style="color:#555;"><b>駅すぱあとAPI</b>を用いてあなたの現在地の最寄り駅の終電を検索し、現在地から徒歩で駅へ向かった時に、余裕を持って終電に乗ることができるかを計算します。</h2>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+		<div class="row mtb centered">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-3">
+        <h4>Step 2</h4>
+        <h2
+           style="color:#555;"><b>Google Directions
+             API</b>を用いて、あなたの現在地から最寄り駅まで徒歩で何分かかるのかを計算します．</h2>
+      </div>
+      <div class="col-lg-4 device2">
+				<img src="assets/img/LP_21.png" width="60%" alt="">
+      </div>
+      <div class="col-lg-3">
+        <h4>Step 4</h4>
+        <h2
+           style="color:#555;">Step 1〜3をもとに、そろそろあなたが駅に向かうべき時間とアプリが判断すれば、プッシュ通知を行います。</h2>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
 	</div><! --/container -->
 
 	<div class="container gray">
-		<div class="row mt centered">
-      <iframe width="853" height="480" src="http://youtu.be/Ir0ODzy_tmg" frameborder="0" allowfullscreen></iframe>
+		<div class="row mtb centered">
+      <iframe width="853" height="480" src="//www.youtube.com/embed/Ir0ODzy_tmg" frameborder="0" allowfullscreen></iframe>
 		</div><!-- /row -->
 
 	</div><! --/container -->

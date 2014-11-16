@@ -22,8 +22,7 @@ body {
 }
 
 .gray {
-  /*background-color: #f2f2f2;*/
-  background-color: #bbbbbb;
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -32,6 +31,10 @@ body {
 
 .device {
   padding-top: 70px;
+}
+
+.device2 {
+  margin-top: -250px;
 }
 
 /* Titles */
@@ -46,7 +49,7 @@ h1 {
 }
 
 h2 {
-  line-height: 40px;
+  line-height: 30px;
   color: #f2f2f2;
   padding-top: 5px;
   font-size: 20px;
@@ -126,9 +129,13 @@ a:after {
 
 /* Helpers */
 
-.mt {
+.mtb {
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+.mt {
+	margin-top: 40px;
 }
 
 .form-control {
