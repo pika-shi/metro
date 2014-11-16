@@ -21,7 +21,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var calloutView :SMCalloutView?
     let defaultRadius = 300
     let threshold_time = 15
-    var notify_minutes = 1
+    var notify_minutes = 0.2
     var stationManager:StationManager!
     var location:CLLocation!
     var l_manager:CLLocationManager!
@@ -109,7 +109,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     
     @IBAction func locationHead(sender: AnyObject) {
         var userDef = NSUserDefaults.standardUserDefaults()
-
+        lat = 35.6483117
+        lon = 139.7054784
         if (lat != nil && lon != nil ){
             var camera:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude:lon, zoom: 16)
             mapView.animateToCameraPosition(camera)
@@ -126,6 +127,8 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         var userDef = NSUserDefaults.standardUserDefaults()
         self.mapView.clear()
+        lat = 35.6483117
+        lon = 139.7054784
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
         lon = location.coordinate.longitude
@@ -136,6 +139,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         var marker:GMSMarker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(lat, lon)
         marker.map = mapView
+        
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         var path:GMSMutablePath = GMSMutablePath()
         
@@ -146,9 +150,11 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if neighbor_station_name == nil {
             neighbor_station_name = ""
         }
+        neighbor_station_name = neighbor_station_name!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        print("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)")
+        println()
+        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)")
         manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
@@ -189,12 +195,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
 
     func lastTrainFetching(){
         self.mapView.clear()
+        lat = 35.6483117
+        lon = 139.7054784
         var userDef = NSUserDefaults.standardUserDefaults()
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour:Int = components.hour
-
+        
         var stationCoordinate = stationManager.getNearStation(lat, lon: lon)
         
         var path:GMSMutablePath = GMSMutablePath()
@@ -205,9 +213,11 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if neighbor_station_name == nil {
             neighbor_station_name = ""
         }
+        neighbor_station_name = neighbor_station_name!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        print("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)")
+        println()
+        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)")
         manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
