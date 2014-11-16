@@ -53,7 +53,7 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func stationNameValidate(stationName:String)->Bool{
+    func stationNameValidate(stationName:String)->String{
         
         
         var filePath = NSBundle.mainBundle().pathForResource("stnamehash", ofType:"json")
@@ -63,23 +63,23 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         var json = JSON.parse(NSString(data:data!, encoding: NSUTF8StringEncoding) as String)
 
         for key in json.generate() {
-            if stationName == (key.0 as String){
-
-                return true
-            }
             let firstobj = key.1.asDictionary
-            
             var romatmp:String? = firstobj?.values.first?.asString
+            if stationName == (key.0 as String){
+                return key.0 as String
+            }
+            
             if romatmp != nil {
                 let romaName:String = split(romatmp!,{ $0 == "."})[3]
+
                 if stationName.lowercaseString == romaName.lowercaseString{
 
-                    return true
+                    return key.0 as String
                 }
             }
         }
 
-        return false
+        return ""
     }
     func dispatch_async_main(block: () -> ()) {
         dispatch_async(dispatch_get_main_queue(), block)
@@ -93,13 +93,12 @@ class ConfViewController: UIViewController,UITextFieldDelegate{
         SVProgressHUD.show()
         textview.enabled = false
         dispatch_async_global{
-            var sw = self.stationNameValidate(self.textview.text)
-            
+            let stationName = self.stationNameValidate(self.textview.text)
             self.dispatch_async_main{
-                if sw {
+                if !stationName.isEmpty {
                     var userDef = NSUserDefaults.standardUserDefaults()
                     userDef.setBool(false, forKey: "firstconfig")
-                    self.ud.setObject(self.textview.text, forKey: "station")
+                    self.ud.setObject(stationName, forKey: "station")
                     self.ud.synchronize()
                     self.dismissViewControllerAnimated(true, completion: nil)
                     SVProgressHUD.showSuccessWithStatus("設定完了")

@@ -21,7 +21,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     var calloutView :SMCalloutView?
     let defaultRadius = 300
     let threshold_time = 20
-    var notify_minutes = 5
+    var notify_minutes = 1
     var stationManager:StationManager!
     var location:CLLocation!
     var l_manager:CLLocationManager!
@@ -124,6 +124,7 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        var userDef = NSUserDefaults.standardUserDefaults()
         self.mapView.clear()
         location = locations.last as CLLocation
         lat = location.coordinate.latitude
@@ -141,9 +142,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let manager:AFHTTPSessionManager = AFHTTPSessionManager()
         let requestSerializer:AFJSONRequestSerializer = AFJSONRequestSerializer()
         let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
+        var neighbor_station_name = userDef.stringForKey("station")
+        if neighbor_station_name == nil {
+            neighbor_station_name = ""
+        }
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
+        print("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)")
+        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
@@ -195,9 +201,14 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         let manager:AFHTTPSessionManager = AFHTTPSessionManager()
         let requestSerializer:AFJSONRequestSerializer = AFJSONRequestSerializer()
         let responseSerializer:AFJSONResponseSerializer = AFJSONResponseSerializer()
+        var neighbor_station_name = userDef.stringForKey("station")
+        if neighbor_station_name == nil {
+            neighbor_station_name = ""
+        }
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
-        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)", parameters: nil,
+        print("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)")
+        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
