@@ -544,8 +544,8 @@
 			baseConfigurationReference = 5B7AEFB7823FC88554888F72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
@@ -553,7 +553,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_MODULE_NAME = Metro;
 				PRODUCT_NAME = Metro;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "498d21c6-c7ad-4daa-bc7d-fc8ff80fe069";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -564,8 +564,8 @@
 			baseConfigurationReference = 42A223C1891E87B0AB218974 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HIKARU TAKEMURA (3J3982V743)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Metro/Info.plist;
@@ -573,7 +573,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_MODULE_NAME = Metro;
 				PRODUCT_NAME = "LAST TRAIN";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "498d21c6-c7ad-4daa-bc7d-fc8ff80fe069";
 				SWIFT_OBJC_BRIDGING_HEADER = "Metro/Metro-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

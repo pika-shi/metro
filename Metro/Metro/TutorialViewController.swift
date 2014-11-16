@@ -17,6 +17,17 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var finishBtn: UIButton!
+    
+    override func viewDidAppear(animated: Bool) {
+        var userDef = NSUserDefaults.standardUserDefaults()
+        if userDef.boolForKey("tutorial") {
+            let moveMain : ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("map") as ViewController
+            moveMain.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
+            self.presentViewController(moveMain, animated: true, completion: nil)
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -123,7 +134,9 @@ class TutorialViewController: UIViewController,UIScrollViewDelegate{
         var userDef = NSUserDefaults.standardUserDefaults()
         userDef.setBool(true,forKey:"tutorial")
         userDef.setBool(true, forKey: "firstconfig")
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let moveMain : ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("map") as ViewController
+        moveMain.modalTransitionStyle=UIModalTransitionStyle.CrossDissolve
+        self.presentViewController(moveMain, animated: true, completion: nil)
         
     
         
