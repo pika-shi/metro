@@ -150,12 +150,13 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if neighbor_station_name == nil {
             neighbor_station_name = ""
         }
-        neighbor_station_name = neighbor_station_name!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
         println()
-        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)")
-        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
+        var posting_url = "http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)"
+        println(posting_url)
+        manager.GET(posting_url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            , parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
@@ -213,12 +214,12 @@ class ViewController: UIViewController,GMSMapViewDelegate,CLLocationManagerDeleg
         if neighbor_station_name == nil {
             neighbor_station_name = ""
         }
-        neighbor_station_name = neighbor_station_name!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         manager.responseSerializer = responseSerializer
         manager.requestSerializer = requestSerializer
         println()
-        println("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)")
-        manager.GET("http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name)", parameters: nil,
+        var posting_url = "http://pikashi.tokyo/lastre/getroute?gps_lat=\(lat)&gps_lon=\(lon)&station_lat=\(stationCoordinate.0)&station_lon=\(stationCoordinate.1)&neighbor_station=\(neighbor_station_name!)"
+        println(posting_url)
+        manager.GET(posting_url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()), parameters: nil,
             success: {(operation: NSURLSessionDataTask!, response: AnyObject!) in
                 if !response.description.componentsSeparatedByString(";")[0].hasSuffix("notyet") {
                     path.removeAllCoordinates()
